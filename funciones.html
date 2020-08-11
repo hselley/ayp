@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Funciones y Subrutinas</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li class="active"><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+    <article class="tema clearfix">
+      <h2>Funciones y Subrutinas</h2>
+      <p class="post-contenido text-justify">
+        Programar requiere algún tipo de organización en la escritura de código. No organizar de alguna forma el código que se escribe solo dificulta la lectura y modificación
+        del mismo para el programador.
+      </p>
+      <p class="post-contenido text-justify">
+        Organizar el código tiene muchas ventajas, una muy importante es la reusabilidad del código. Es común que al escribir algún programa existas operaciones que se requieren
+        repetir en diversas secciones del código, con diferentes parámetros. Resultaría impráctico e ineficiente escribir una y otra vez el fragmento de código cada vez que se
+        necesite, en lugar de eso es útil escribir ese código en una parte especial del programa y mandarlo llamar cada vez que se necesite, incluso con parámetros diferentes.
+        A esto se le conoce como reutilización de código.
+      </p>
+      <p class="post-contenido text-justify">
+        En Gambas el código se organiza dividiéndolo en <b>procedimientos</b>. Existen dos tipos de procedimientos: <b>subrutinas</b> y <b>funciones</b>.
+      </p>
+    </article>
+
+    <p class="post-contenido text-justify"></p>
+
+    <article class="tema clearfix">
+      <h2>Subrutinas</h2>
+      <p class="post-contenido text-justify">
+        Una subrutina es un procedimiento que ejecuta cierta acción y obtiene un resultado. Las subrutinas pueden o no recibir parametros para su ejecución y no
+        devuelven un resultado.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintáxis para escribir una subrutina es la siguiente:
+        <pre class="gambas">
+          <span class="sub">Public Sub</span> nombreSubrutina (p1 As Tipo_variable, p2 As Tipo_variable, ...)
+            código que ejecuta la subrutina
+          <span class="sub">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que la sintaxis de la subrutina requiere de un nombre único con el que se identificará dentro del programa. Opcionalmente
+        se le puede enviar algún parámetro el cual la subrutina lo recibe con las variables que se declaran dentro de los paréntesis
+        que están inmediatamente despues del nombre. El código que forma parte de la subrutina se debe escribir hasta antes de la palabra
+        clave <code>End</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        El código de la subrutina debe escribirse al final del programa, justo después de que termina la rutina principal.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo</b>. Esta Subrutina calcula el promedio de dos números que recibe como argumento.
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="sub">media</span>(4,8)
+          <span class="fin">End</span>
+
+          <span class="sub">Public Sub media</span>(valor1 As <span class="tipoDato">Integer</span>, valor2 As <span class="tipoDato">Integer</span>)
+            <span class="print">Print</span> (valor1 + valor2) / 2
+          <span class="sub">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+          El programa funciona de la siguiente forma: La rutina principal incia y cuando la ejecución alcanza la líena donde se ecuentra
+          <code>media(4,8)</code>, Gambas busca una función o subrutina que se haya declarado al final de la rutina principal y brinca
+          la ejecución hasta ese punto del programa. Al brincar, se envían los números <code>4</code> y <code>8</code> como argumentos de
+          la subrutina.
+      </p>
+      <p class="post-contenido text-justify">
+        Ya en la subrutina, se reciben los dos números <code>4</code> y <code>8</code> como argumentos y se almacenan en las variables
+        <code>valor1</code> y <code>valor2</code> respectivamente. Observe que en ese momento se convierte ese argumento al tipo de dato
+        que se delcara en la subrutina, en este caso <code>Integer</code>. Por esta razón si el argumento no fuera entero, se convertiría
+        a <code>Integer</code> al guardarse en la variable.
+      </p>
+      <p class="post-contenido text-justify">
+        Dentro de la subrutina se realiza el cálculo y la impresión del resultado. Una vez que se alcanza el <code>End</code> de la subrutina,
+        se brinca de vuelta al punto donde ésta fue llamada y como ya no hay más intrucciones se completa así la ejecución del programa.
+      </p>
+      <p class="post-contenido text-justify">
+        Las variables <code>valor1</code> y <code>valor2</code> solamente existen dentro de la subrutina. Esto sigifica que cuando se manda
+        llamar la subrutina, se declaran tales variables y ellas solo existen en el <i>ámbito</i> de la subrutina. Una vez que termina la
+        ejecución de la subrutina estas variables se destruyen. A este tipo de variables se les llama <b>variables locales</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        Es posible que una subrutina llame a otras subrutinas a su vez, incluso puede llamarse a sí misma.
+      </p>
+    </article>
+
+    <article class="tema clearfix">
+      <h2>Funciones</h2>
+      <p class="post-contenido text-justify">
+        Una función es un procedimiento que ejecuta cierta acción y obtiene un resultado. Las funciones pueden o no recibir parametros para su ejecución y pueden
+        o no devolver algún resultado.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintáxis para escribir una función es la siguiente:
+        <pre class="gambas">
+          <span class="funcion">Public Function</span> nombreFuncion (p1 As Tipo_variable, p2 As Tipo_variable, ...) As <span class="tipoDato">tipoDato</span>
+            código que ejecuta la función
+            <span class="return">Return</span>
+          <span class="funcion">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        La sintaxis de la función requiere de un nombre único con el que se identificará dentro del programa. Opcionalmente
+        se le puede enviar algún parámetro el cual la función lo recibe con las variables que se declaran dentro de los paréntesis
+        que están inmediatamente despues del nombre. El código que forma parte de la función se debe escribir hasta antes de la palabra
+        clave <code>End</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        Tal como la subrutina, el código de la función deberá escribirse después de la rutina principal.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo</b>. Esta Función calcula el promedio de dos números que recibe como argumento.
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="dim">dim</span> x as <span class="tipoDato">Float</span>
+            <span class="sub">x = media</span>(4,8)
+            <span class="print">Print</span> "El promedio es: "; x
+          <span class="fin">End</span>
+
+          <span class="sub">Public Function media(</span>valor1 As <span class="tipoDato">Integer</span>, valor2 As <span class="tipoDato">Integer</span><span class="sub">)</span> As <span class="tipoDato">Float</span>
+            <span class="dim">dim</span> p as <span class="tipoDato">Float</span>
+            p = (valor1 + valor2) / 2
+            <span class="return">Return</span> p
+          <span class="sub">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+          El programa funciona de la siguiente forma: La rutina principal incia, se declara la variable <code>x</code> y cuando la
+          ejecución alcanza la líena donde se ecuentra <code>x = media(4,8)</code>, Gambas busca una función o subrutina que se
+          haya declarado al final de la rutina principal y brinca la ejecución hasta ese punto del programa. Al brincar, se envían
+          los números <code>4</code> y <code>8</code> como argumentos de la subrutina.
+      </p>
+      <p class="post-contenido text-justify">
+        Una vez que la ejecución llegó a la función, se reciben los dos números <code>4</code> y <code>8</code> como argumentos y
+        se almacenan en las variables locales <code>valor1</code> y <code>valor2</code> respectivamente. Observe que en ese momento se
+        convierte ese argumento al tipo de dato que se delcara en la función, en este caso <code>Integer</code>. Por esta razón si el
+        argumento no fuera entero, se convertiría a <code>Integer</code> al guardarse en la variable.
+      </p>
+      <p class="post-contenido text-justify">
+        En la función se declara la variable local <code>p</code> como <code>Float</code>. Luego se realiza el cálculo y se almacena en
+        la variable <code>p</code>. Posteriomente se invoca a la instrucción <code>Return</code>, la cual se encarga de devolver el contenido de la
+        variable que se le pasa como argumento, en este caso <code>p</code>. <code>Return</code> devuelve el contenido de la variable
+        <code>x</code> al punto donde fue invocada la función, en este caso ese valor se almacena en la variable local <code>x</code>
+        de la subrutina principal.
+      </p>
+      <p class="post-contenido text-justify">
+        Las variables <code>valor1</code> y <code>valor2</code> solamente existen dentro de la función. Esto sigifica que cuando se manda
+        llamar la función, se declaran tales variables y ellas solo existen en el <i>ámbito</i> de la función. Una vez que termina la
+        ejecución de la función estas variables se destruyen. A este tipo de variables se les llama <b>variables locales</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        Es posible que una función llame a otras subrutinas o funciones a su vez, incluso puede llamarse a sí misma.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Nota Importante:</b> Los arreglos y objetos siempre se pasan por referencia. Es decir, si se pasa como parámetro un arreglo
+        de elementos <code>Integer</code> a una función, al modificarlo dentro de la función, se verá modificado el original.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

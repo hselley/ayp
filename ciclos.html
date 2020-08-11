@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Ciclos</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li class="active"><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema clearfix">
+      <h2>Ciclo For</h2>
+      <p class="post-contenido text-justify">
+        En los diagramas de flujo se definió el ciclo <code>Repetir</code>, en Gambas se el conoce a este ciclo como <code>For</code>. De la misma forma que anteriormente
+        la característica principal de este ciclo es que <b>se conoce de antemano</b> (en el contexto del programa) <b>el número de iteraciones</b> que realizará el ciclo.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintáxis de esta instrucción es la siguiente:
+        <pre class="gambas">
+          <span class="for">For</span> variableControl = condiciónInicial <span class="for">To</span> condiciónFinal [ <span class="for">STEP</span> Expresión ]
+            Operaciones a repetir
+          <span class="for">Next</span></pre>
+          El ciclo por defecto incrementa la <code>variableControl</code> en una unidad por iteración, a menos que se especifique un valor a <code>Step</code>. Pueden
+          especificarse valores negativos, si se desea una cuenta regresiva. <br>
+          <b>Ejemplo:</b>
+          <pre class="gambas">
+            <span class="dim">Dim</span> n As <span class="tipoDato">Integer</span>
+            <span class="for">For</span> n = 10 <span class="for">To</span> 1 <span class="for">Step</span> -1
+              <span class="print">Print</span> n
+            <span class="for">Next</span></pre>
+          Si se necesita interrumpir la ejecución de un ciclo, se puede utilizar la sentencia <code>Break</code>. <br>
+          <b>Ejemplo:</b>
+          <pre class="gambas">
+            <span class="dim">Dim</span> n As <span class="tipoDato">Integer</span>
+            <span class="for">For</span> n = 10 <span class="for">To</span> 1 <span class="for">Step</span> -1
+              <span class="if">If</span> n = 3 <span class="if">Then</span> <span class="break">Break</span>
+              <span class="print">Print</span> n
+            <span class="for">Next</span></pre>
+          El ciclo acabaría cuando <code>n</code> valiera 3 y por lo tanto no se imprimen los últimos 3 números.
+      </p>
+      <p class="post-contenido text-justify">
+        No se recomienda utilizar mucho la instrucción <code>Break</code> debido a que los programas pueden ser dificiles de leer, y esta instrucción
+        rompe con la programación estructurada.
+      </p>
+      <p class="post-contenido text-justify">
+        Por otro lado, se dispone de la sentencia <code>Continue</code>, que permite saltarse pasos en la ejecución del ciclo. <br>
+        <b>Ejemplo:</b>
+        <pre class="gambas">
+          <span class="dim">Dim</span> n As <span class="tipoDato">Integer</span>
+          <span class="for">For</span> n = 1 <span class="for">To</span> 4
+            <span class="if">If</span> n = 2 <span class="if">Then</span> <span class="continue">Continue</span>
+              <span class="print">Print</span> n
+          <span class="for">Next</span></pre>
+        En este caso, al ejecutarse se saltaría el 2 al escribir todos los valores de <code>n</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo</b>. Programa que imprime el código ASCII
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> i As <span class="tipoDato">Byte</span>
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> 254
+            <span class="print">Print</span> i, " = ", <span class="funcion">String.Chr</span>(<span class="funcion">CStr</span>(i))
+          <span class="for">Next</span>
+          <span class="fin">End</span></pre>
+        El código ASCII es un conjunto de símbolos que una terminal puede manejar. Dentro de este conjunto se encuentran caracteres
+        imprimibles y otros no imprimibles.
+      </p>
+    </article>
+
+    <article class="tema clearfix">
+      <h2>Ciclo For Each</h2>
+      <p class="post-contenido text-justify">
+        Existe una variante del ciclo <code>For</code> que se usa al recorrer elementos de una colección, tal como una matriz. La sintaxis en
+        este caso es la siguiente:
+        <pre class="gambas">
+          <span class="for">For Each</span> Variable <span class="for">In</span> Expresión
+            operaciones
+          <span class="for">Next</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Un ejemplo para esta variante de ciclo sería con una matriz dinámica.
+
+        <pre class="gambas">
+          <span class="dim">Dim</span> Matriz As <span class="tipoDato">String</span>[]
+          <span class="dim">Dim</span> Elemento As <span class="tipoDato">String</span>
+
+          Matriz = <span class="funcion">New</span> <span class="tipoDato">String</span>[]
+
+          Matriz.<span class="funcion">Add</span>("Azul")
+          Matriz.<span class="funcion">Add</span>("Rojo")
+          Matriz.<span class="funcion">Add</span>("Verde")
+
+          <span class="for">For Each</span> Elemento <span class="for">In</span> Matriz
+            <span class="print">Print</span> Elemento;;
+          <span class="for">Next</span></pre>
+        Este programa imprime lo siguiente: <code>Azul Rojo Verde</code>.
+      </p>
+    </article>
+    <article class="tema clearfix">
+      <h2>Ciclo While</h2>
+      <p class="post-contenido text-justify">
+        En los Diagramas de Flujo y Pseudocódigo se definió el ciclo <code>Mientras</code>, la implementación de este ciclo en Gambas se denomina <code>While</code>.
+        Al igual que en las secciones anteriores, la característica distintiva de este ciclo es que <b>no se conoce el número de iteraciones que ocurrirán</b> (dentro del
+        contexto del programa). El número de iteraciones depende de factores externos al programa, como por ejemplo, el resultado de alguna operación aritmética o
+        de la interacción con el usuario, por solo mencionar algunas.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintaxis es la siguiente:
+        <pre class="gambas">
+          <span class="while">While</span> condiciónFinal
+            Operaciones a repetir
+          <span class="while">Wend</span></pre>
+        Observe que la sintaxis del ciclo <code>While</code> solamente hace referencia explícita a la condición final del ciclo. La condición inicial se debe establecer
+        antes del ciclo y no se cuenta con un incremento explícito.
+      </p>
+      <p class="post-contenido text-justify">
+        Para controlar el ciclo se utiliza una <code>variable de control</code> que al iniciar el ciclo tiene el valor de la condición inicial y para que el ciclo finalice
+        debe cumplir con la condición final.
+      </p>
+      <p class="post-contenido text-justify">
+        Por esta razón, en el ciclo <code>While</code> antes de comenzar se evalúa la variable de control contra la condición final, y solo se entrará al ciclo <b>mientras</b>
+        el resultado de dicha evaluación resulte ser <code>True</code>. Naturalmente si el resultado de la evaluación es <code>False</code> el programa no ingresa al ciclo.
+      </p>
+      <p class="post-contenido text-justify">
+        Por la misma razón, el ciclo <code>While</code> solo iterará mientras la evaluación contra la condición inicial sea <code>True</code>, de allí su nombre: <b>mientras</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo:</b> El siguiente programa solicita numeros al usuario, y las iteraciones ocurren mientras el numero sea mayor que cero.
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="dim">Dim</span> numero As <span class="tipoDato">Integer</span>
+            numero = 1
+            <span class="while">While</span> numero > 0
+              <span class="print">Print</span> "<span class="texto">Introduzca un numero: </span>"
+              <span class="input">Input</span> numero
+            <span class="while">Wend</span>
+          <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        En este programa la variable de control del ciclo es <code>numero</code>, la condición inicial es <code>numero=1</code> y la condición final es <code>numero>0</code>.
+        Observe que se le asignó inicialmente a la variable de control el valor de 1, por lo que al evaluar esta variable contra la condición final el resultado es <code>True</code>.
+        De esta forma es que se ingresa inicialmente al ciclo y en el momento en que esta evaluación sea <code>False</code> entonces el ciclo terminará.
+      </p>
+      <p class="post-contenido text-justify">
+        Si la variable de control inicialmente se le asignara el valor de 0, la evaluación contra la condición inicial sería <code>False</code> por lo que el programa no
+        entraría al ciclo.
+      </p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+    <article class="tema clearfix">
+        <h2>Ciclo Repeat</h2>
+        <p class="post-contenido text-justify">
+          El ciclo <code>Repeat</code> es una variante de <code>While</code>, por lo que comparten la característica de que <b>no se sabe de antemano el número de iteraciones a
+          ejecutarse</b>.
+        </p>
+        <p class="post-contenido text-justify">
+          La sintaxis de esta instrucción es la siguiente:
+          <pre class="gambas">
+            <span class="repeat">Repeat</span>
+              Operaciones a repetir
+            <span class="repeat">Until</span> condiciónFinal
+          </pre>
+        </p>
+        <p class="post-contenido text-justify">
+          La diferencia que existe entre ellos consiste en el momento que ocurre la evaluación de la condición final del ciclo. En el caso del ciclo <code>While</code>
+          la evaluación ocurre antes de iniciar cada iteración del ciclo, mientras que <b>en el ciclo <code>Repeat</code> la evaluación de la condición final ocurre al terminar la iteración</b>.
+        </p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+        <p class="post-contenido text-justify"></p>
+    </article>
+
+  <article class="tema clearfix">
+    <h2>Ciclos Anidados</h2>
+    <p class="post-contenido text-justify">
+      Un ciclo anidado es la acción de introducir un ciclo dentro de otro. Al ciclo que contiene al otro ciclo se le conoce como <b>ciclo exterior</b> y al que está dentro se le
+      conoce como <b>ciclo interior</b>.
+    </p>
+    <p class="post-contenido text-justify">
+      En este caso en cada iteración del ciclo exterior, el ciclo interior se ejecuta tantas veces como las propias condiciones del ciclo lo determinen. Pueden anidarse tantos
+      ciclos como el programador lo requiera.
+    </p>
+    <p class="post-contenido text-justify">
+      <b>Ejemplo 1</b>. El siguiente código muestra un ejemplo de un ciclo anidado.
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> i, j As <span class="tipoDato">Byte</span>
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> 2
+            <span class="for">For</span> j = 0 <span class="for">To</span> 3
+              <span class="print">Print</span> "<span class="texto">Iteración del ciclo exterior </span>"; i; "<span class="texto">, Iteración del ciclo interior </span>"; j
+            <span class="for">Next</span>
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+    </p>
+    <p class="post-contenido text-justify">
+      En este ejemplo, genera el siguiente salida:
+      <pre class="gambas">
+          <span class="texto">Iteración del ciclo exterior 0, Iteración del ciclo interior 0
+          Iteración del ciclo exterior 0, Iteración del ciclo interior 1
+          Iteración del ciclo exterior 0, Iteración del ciclo interior 2
+          Iteración del ciclo exterior 0, Iteración del ciclo interior 3
+          Iteración del ciclo exterior 1, Iteración del ciclo interior 0
+          Iteración del ciclo exterior 1, Iteración del ciclo interior 1
+          Iteración del ciclo exterior 1, Iteración del ciclo interior 2
+          Iteración del ciclo exterior 1, Iteración del ciclo interior 3
+          Iteración del ciclo exterior 2, Iteración del ciclo interior 0
+          Iteración del ciclo exterior 2, Iteración del ciclo interior 1
+          Iteración del ciclo exterior 2, Iteración del ciclo interior 2
+          Iteración del ciclo exterior 2, Iteración del ciclo interior 3</span></pre>
+    </p>
+    <p class="post-contenido text-justify">
+      En este ejemplo hay dos variables, <code>i</code> es la variable de control del ciclo exterior y <code>j</code> es la variable de control del ciclo interior.
+      Observe que por cada iteración del ciclo exterior, el ciclo interior completa sus 4 iteraciones. A su vez el ciclo exterior itera 3 veces.
+    </p>
+    <p class="post-contenido text-justify">
+      Al inicio, el programa ingresa al ciclo exterior con <code>i=0</code> y comienza la primera iteración de ese ciclo. El programa entonces ingresa al ciclo interior
+      con <code>j=0</code>, y comienza sus iteraciones. En ese momento es que se imprime la primer línea. El ciclo continua con sus demás iteraciones imprimiendo la línea
+      correspondiente cuando <code>j</code> toma los valores de <code>1</code>, <code>2</code> y <code>3</code>, momento en el que ese ciclo termina. En ese punto
+      <code>i</code> aún tiene el valor de <code>0</code> y el ciclo exterior termina su primera iteración, iniciado la segunda cuando <code>i=1</code>. Ahora se repite
+      el ciclo interior comenzando con <code>j=0</code> con el nuevo valor de <code>i=1</code>. La operación se repite hasta que <code>i=2</code>.
+    </p>
+    <p class="post-contenido text-justify">
+      Por esta razón es que el total de iteraciones es 12.
+    </p>
+
+    <p class="post-contenido text-justify">
+      <b>Ejemplo 2</b>. El siguiente código muestra un ejemplo de dos ciclos anidados.
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> i, j As <span class="tipoDato">Byte</span>
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> 2
+            <span class="for">For</span> j = 0 <span class="for">To</span> 3
+              <span class="print">Print</span> "<span class="texto">Iteración del ciclo exterior </span>"; i; "<span class="texto">, Iteración del ciclo interior A </span>"; j
+            <span class="for">Next</span>
+            <span class="for">For</span> j = 0 <span class="for">To</span> 3
+              <span class="print">Print</span> "<span class="texto">Iteración del ciclo exterior </span>"; i; "<span class="texto">, Iteración del ciclo interior B </span>"; j
+            <span class="for">Next</span>
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+    </p>
+    <p class="post-contenido text-justify">
+      En este ejemplo, genera el siguiente salida:
+      <pre class="gambas">
+          <span class="texto">Iteración del ciclo exterior 0, Iteración del ciclo interior A 0
+          Iteración del ciclo exterior 0, Iteración del ciclo interior A 1
+          Iteración del ciclo exterior 0, Iteración del ciclo interior A 2
+          Iteración del ciclo exterior 0, Iteración del ciclo interior A 3
+          Iteración del ciclo exterior 0, Iteración del ciclo interior B 0
+          Iteración del ciclo exterior 0, Iteración del ciclo interior B 1
+          Iteración del ciclo exterior 0, Iteración del ciclo interior B 2
+          Iteración del ciclo exterior 0, Iteración del ciclo interior B 3
+          Iteración del ciclo exterior 1, Iteración del ciclo interior A 0
+          Iteración del ciclo exterior 1, Iteración del ciclo interior A 1
+          Iteración del ciclo exterior 1, Iteración del ciclo interior A 2
+          Iteración del ciclo exterior 1, Iteración del ciclo interior A 3
+          Iteración del ciclo exterior 1, Iteración del ciclo interior B 0
+          Iteración del ciclo exterior 1, Iteración del ciclo interior B 1
+          Iteración del ciclo exterior 1, Iteración del ciclo interior B 2
+          Iteración del ciclo exterior 1, Iteración del ciclo interior B 3
+          Iteración del ciclo exterior 2, Iteración del ciclo interior A 0
+          Iteración del ciclo exterior 2, Iteración del ciclo interior A 1
+          Iteración del ciclo exterior 2, Iteración del ciclo interior A 2
+          Iteración del ciclo exterior 2, Iteración del ciclo interior A 3
+          Iteración del ciclo exterior 2, Iteración del ciclo interior B 0
+          Iteración del ciclo exterior 2, Iteración del ciclo interior B 1
+          Iteración del ciclo exterior 2, Iteración del ciclo interior B 2
+          Iteración del ciclo exterior 2, Iteración del ciclo interior B 3</span></pre>
+    </p>
+    <p class="post-contenido text-justify">
+      En este ejemplo también hay dos variables, <code>i</code> es la variable de control del ciclo exterior y <code>j</code> es la variable de
+      control de los ciclos interiores. Observe que por cada iteración del ciclo exterior, los ciclos interiores completan sus 4 iteraciones.
+      A su vez el ciclo exterior itera 3 veces.
+    </p>
+    <p class="post-contenido text-justify">
+      Al inicio, el programa ingresa al ciclo exterior con <code>i=0</code> y comienza la primera iteración de ese ciclo. El programa entonces ingresa
+      al primer ciclo interior con <code>j=0</code>, y comienza sus iteraciones. En ese momento es que se imprime la primer línea. Este ciclo continua
+      con sus demás iteraciones imprimiendo la línea correspondiente cuando <code>j</code> toma los valores de <code>1</code>, <code>2</code> y
+      <code>3</code>, momento en el que ese ciclo termina. En ese punto comienza el segundo ciclo interior, que imprime exactamente las mismas líneas
+      que el primer ciclo interior. Posteriormente, dado que <code>i</code> aún tiene el valor de <code>0</code> y el ciclo exterior termina su primera
+      iteración, iniciado la segunda cuando <code>i=1</code>. Ahora se repite el ciclo interior comenzando con <code>j=0</code> con el nuevo valor de
+      <code>i=1</code>. La operación se repite hasta que <code>i=2</code>.
+    </p>
+    <p class="post-contenido text-justify">
+      Por esta razón es que el total de iteraciones es 24.
+    </p>
+
+
+  </article>
+
+
+
+
+
+
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Arreglos</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li class="active"><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+    <article class="tema clearfix">
+      <h2>Arreglos</h2>
+      <p class="post-contenido text-justify">
+        En numerosas ocasiones, cuando se intenta resolver un problema mediante la programación, surge la necesidad de contar con la posibilidad de
+        almacenar un conjunto de datos. Algunas de esas veces los datos tienen características en común, por ejemplo que sean del mismo tipo y
+        representen una misma cosa.
+      </p>
+      <p class="post-contenido text-justify">
+        Por ejemplo, en una lista de calificaciones de cierto profesor hay datos en común y representan una misma cosa. Un dato sería una palabra,
+        que representa el nombre del alumno; mientras otro dato sería un número que representa la calificación. Siguiendo el ejemplo, sería impráctico
+        y muy complicado declarar en un programa tantas variables como alumnos haya en un grupo.
+      </p>
+      <p class="post-contenido text-justify">
+        La forma de almacenar esto es en una estructura llamada <b>Arreglo</b>.
+      </p>
+    </article>
+
+  <article class="tema clearfix">
+      <h2>Arreglos Unidimensionales</h2>
+      <p class="post-contenido text-justify">
+        Un arreglo unidimensional es un tipo de dato que permite almacenar un conjunto de datos homogeneos, es decir, del mismo tipo de dato. Al declararse
+        el arreglo debe indicarse el tamaño, en ese momento el compilador reserva la memoria que se necesite para almacenar los datos solicitados por el
+        programador.
+      </p>
+      <p class="post-contenido text-justify">
+        El límite en la dimensión de los arreglos varía dependiendo del lenguaje de programación que se utilice, siendo el límite natural la memoria de la
+        computadora.
+      </p>
+      <p class="post-contenido text-justify">
+        <pre class="gambas">
+          <span class="dim">Dim</span> nombre As <span class="dim">New</span> <span class="tipoDato">tipoDato</span>[tamaño]</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Imaginese que un arreglo es como un conjunto de lockers. Cada locker tiene cierto tamaño para guardar objetos en él y todos son de las mismas
+        dimensiones. Para diferenciar entre ellos e identificar uno en particular, cada locker posee un número único con el cual puede ser encontrado.
+      </p>
+      <img src="img/arreglos/lockers1.jpg" width="380" alt="Locker" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        Un arreglo funciona de la misma forma. Al declararse se debe especificar el tamaño, es decir el número de localidades de memoria. Es como
+        si se declararan muchas variables del mismo tipo al al mismo tiempo y asociadas todas ellas a un nombre en común.
+      </p>
+      <p class="post-contenido text-justify">
+        Por ejemplo, considere el caso de un profesor que desea tener una lista de calificaciones de cierto grupo. En ese grupo tiene 8 alumnos
+        y las calificaciones son numéricas no necesariamente enteras. Esta es la lista de calificaciones.
+      </p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="info">
+              <th class="textoTabla">Numero de Lista</th>
+              <th class="textoTabla">Nombre</th>
+              <th class="textoTabla">Calificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><p class="textoTabla">1</p>
+              </td>
+              <td>
+                <p class="textoTabla">Hugo</p>
+              </td>
+              <td>
+                <p class="textoTabla">6.8</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">2</p>
+              </td>
+              <td>
+                <p class="textoTabla">Luis</p>
+              </td>
+              <td>
+                <p class="textoTabla">8.3</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">3</p>
+              </td>
+              <td>
+                <p class="textoTabla">Veronica</p>
+              </td>
+              <td>
+                <p class="textoTabla">10.0</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">4</p>
+              </td>
+              <td>
+                <p class="textoTabla">Claudia</p>
+              </td>
+              <td>
+                <p class="textoTabla">9.5</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">5</p>
+              </td>
+              <td>
+                <p class="textoTabla">Mario</p>
+              </td>
+              <td>
+                <p class="textoTabla">4.5</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">6</p>
+              </td>
+              <td>
+                <p class="textoTabla">Octavio</p>
+              </td>
+              <td>
+                <p class="textoTabla">7.7</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">7</p>
+              </td>
+              <td>
+                <p class="textoTabla">Victoria</p>
+              </td>
+              <td>
+                <p class="textoTabla">9.4</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="textoTabla">8</p>
+              </td>
+              <td>
+                <p class="textoTabla">Artemio</p>
+              </td>
+              <td>
+                <p class="textoTabla">10.0</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="post-contenido text-justify">
+        En este caso, podrían declararse 8 variables donde cada una contendría la calificación de cada alumno, pero esto resulta impráctico de muchas
+        formas. Una de ellas ocurre si el grupo tuviera más alumnos habría que hacer muchas declaraciones y ademas la forma de acceder a los datos
+        sería poco práctico. Por otro lado, si hubiera alumnos que se dan de baja entonces la lista disminuiría y habría que hacer cambios funcionales
+        en el código que hayamos escrito. Este problema y otros más se pueden resolver con un arreglo.
+      </p>
+      <p class="post-contenido text-justify">
+        Para este ejemplo declaremos un arreglo que se llame <code>calificaciones</code>,
+        de tipo <code>Single</code> y de <code>8</code> localidades. Esto se haría con la siguiente línea de código.
+      </p>
+      <p class="post-contenido text-justify">
+        <pre class="gambas">
+          <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Single</span>[8]</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Como puede obervar, el arreglo fue declarado como <code>Single</code> lo que significa que todas los contenedores dentro de el son del
+        mismo tipo, es decir, son homogéneas. Para diferenciar las calificaciones, cada alumno debe tener un número de lista.
+      </p>
+      <img src="img/arreglos/arreglos1.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+      <p class="post-contenido text-justify">
+        Observe que la numeración de las localidades del arreglo comienza en <code>0</code>, quizá lo más natural para un humano sería comenzar la
+        numeración de las lolcalidades de memoria desde <code>1</code> hasta <code>8</code>, pero se comienza en <code>0</code> debido a la manera
+        como están numeradas las localidades de memoria en las computadoras y se hace de esta forma en la gran mayoría de los lenguajes de
+        programación.
+      </p>
+      <p class="post-contenido text-justify">
+        Cada una de las localidades actúa entonces como una variable independiente de las demás, por esa razón puede ser leída y/o modificada
+        sin afectar a las demás. Lo que tienen en común las variables en los contenedores, es que son del mismo tipo y que pertenecen al mismo arreglo, en este
+        caso el arreglo <code>calificaciones</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        Por ejemplo, observe el programa a continuación y trate de entender como funciona.
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Single</span>[8]
+
+            calificaciones[0] = 6.8
+            calificaciones[1] = 8.3
+            calificaciones[2] = 10.0
+            calificaciones[3] = 9.5
+            calificaciones[4] = 4.5
+            calificaciones[5] = 7.7
+            calificaciones[6] = 9.4
+            calificaciones[7] = 10.0
+
+          <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        En este programa declaramos un arreglo llamado <code>calificaciones</code> tipo <code>Single</code> de <code>8</code> posiciones. Luego se le asignan
+        a todas las lolcalidades todos los valores de la tabla mostrada anteriormente.
+      </p>
+      <p class="post-contenido text-justify">
+        Si por alguna razón se intentara hacer referencia a una localidad que no exista en el arreglo, el compilador mandará un mensaje de error. Por ejemplo,
+        si ignoraramos el hecho de que la numeración de las localidades comienzan en <code>0</code>, el <b>código incorrecto</b> sería el siguiente:
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Single</span>[8]
+
+            calificaciones[1] = 6.8
+            calificaciones[2] = 8.3
+            calificaciones[3] = 10.0
+            calificaciones[4] = 9.5
+            calificaciones[5] = 4.5
+            calificaciones[6] = 7.7
+            calificaciones[7] = 9.4
+            calificaciones[8] = 10.0
+
+          <span class="fin">End</span></pre>
+          Este programa envía un mensaje de error <code>"Fuera de los límites"</code> que indica que se rebasaron los límites del arreglo, debido a que solo
+          existen 8 posiciones en memoria que comienzan en 0 y terminan en 7. El programa hace una referencia a la posición 8, la novena, que no existe. Es
+          muy importante que tenga esto en mente siempre que desarrolle un programa en cualquier lenguaje de programación.
+      </p>
+      <p class="post-contenido text-justify">
+        Ahora hagamos un ejemplo completo referente a las califcaciones de la tabla. Desarrollemos un programa que solicita todas las calificaciones, una
+        a la vez y las almacene en el arreglo. Posteriormente haremos la impresión de todas las calificaciones dentro del arreglo.
+        <pre class="gambas">
+          <span class="inicio">Public Sub Main()</span>
+            <span class="dim">Dim</span> i As <span class="tipoDato">Byte</span>
+            <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Single</span>[8]
+
+            <span class="print">Print</span> "<span class="texto">Ingrese las calificaciones de los alumnos</span>"
+            <span class="for">For</span> i = 0 <span class="for">To</span> 7
+              <span class="print">Print</span> "<span class="texto">Alumno </span>"; i + 1; "<span class="texto"> = </span>";
+              <span class="input">Input</span> calificaciones[i]
+            <span class="for">Next</span>
+            <span class="print">Print</span> "<span class="texto">Todas las calificaciones fueron almacenadas en el arreglo</span>"
+
+            <span class="print">Print</span> "<span class="texto">Ahora imprimiremos las calificaciones en el arreglo</span>"
+            <span class="for">For</span> i = 0 <span class="for">To</span> 7
+              <span class="print">Print</span> "<span class="texto">Alumno </span>"; i + 1; "<span class="texto"> = </span>"; calificaciones[i]
+            <span class="for">Next</span>
+          <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Existen varias cosas importantes que mencionar en este ejemplo.
+      </p>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            Observe que las asignaciones a las localidades del arreglo se hacen a través de un ciclo y no una a la vez como en los primeros ejemplos.
+            Utilizar un ciclo resulta muy práctico debido a que sin importar el tamaño del arreglo, este código es idéntico, tan solo basta con cambiar
+            la condición final del ciclo para que coincida con el tamaño del arreglo.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Debido a que el ingreso de calificaciones es un proceso repetitivo, se utiliza un ciclo. Esto es muy conveniente por la razón descrita en el punto
+            anterior y además los procesadores de las computadoras están optimizados para este tipo de estructuras.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            El ciclo se debe ajustar a las dimensiones del arreglo. Por esta razón es que en los dos ciclos que utilizamos en este programa la condición
+            inicial es <code>0</code>, la condición final es <code>7</code> y el incremento es <code>1</code>.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Se hace una referencia a la localidad del arreglo a través el valor de la variable de control <code>i</code>, tanto en el caso del <code>Print</code>
+            y el <code>Input</code>. Debido a esto el acceso a las localidades se hace secuencialmente de acuerdo al valor de la variable de control <code>i</code>.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            El pimer ciclo se encarga de solicitar al usuario los valores de las calificaciones, se utiliza un <code>Print</code> para mostrar información al usuario
+            y un <code>Input</code> para almacenar el valor en la localidad correspondiente. El segundo ciclo se encarga de imprimir el contenido del arreglo en la
+            pantalla mediante el <code>Print</code>.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Finalmente, el en caso del <code>Print</code> se hace una combinación de los valores de la variable de control <code>i</code> y el contenido de las
+            localidades del arreglo <code>calificaciones</code>.
+          </p>
+        </li>
+      </ul>
+    </article>
+
+    <article class="tema clearfix">
+      <h2>Arreglos Multidimensionales</h2>
+    </article>
+    <article class="tema clearfix">
+      <p class="post-contenido text-justify">
+        Un arreglo puede tener tantas dimensiones como el usuario lo requiera. El camino más natural para comprenderlos es comenzar con los arreglos de dos
+        dimensiones e ir aumentando la cantidad de dimensiones.
+      </p>
+      <p class="post-contenido text-justify">
+        Formalmente definimos un arreglo bidimensional de la siguiente manera:
+      </p>
+      <p class="post-contenido text-center"><em>
+        "Un arreglo bidimensional es una colección finita, homogénea y ordenada de datos, en la que se hace referencia a cada elemento del arreglo por medio de
+        dos índices. El primero de los índices se utiliza para indicar la fila y el segundo para indicar la columna."
+      </em></p>
+      <p class="post-contenido text-justify">
+        Para el caso de dos dimensiones es natural asociarlo con una matriz, y por tanto en filas y columnas. Cuando son tres o más dimensiones es complicado
+        pensar en una asociación sencilla sin embargo en general se debe tener un índice para cada dimensión que se haya declarado en el arreglo.
+      </p>
+      <p class="post-contenido text-justify">
+        Si continuamos con la analogía de los lockers, podemos asociar un arreglo de dos dimensiones con un conjunto de lockers del mismo tamaño acomodados
+        en forma filas y columnas.
+      </p>
+      <img src="img/arreglos/lockers2.jpg" alt="" class="imgcenter img-rounded img-responsive"></td>
+      <p class="post-contenido text-justify">
+        En este caso considere que para identificar un locker en específico se puede utilizar su posición en la fila y en la columna. En este caso se puede
+        incrementar la cantidad de lockers si aumenta el número de filas y/o columnas.
+      </p>
+      <p class="post-contenido text-justify">
+        Por esta razón es que <b>en un arreglo multidimensional se necesita de un índice por cada dimensión</b>. Entonces, para el caso de una <b>matriz dimensional</b>
+        se necesitan <b>dos índices</b>, uno para los <b>renglones</b> y otro para las <b>columnas</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintaxis para declarar un arreglo multidimensional es la siguiente:
+      </p>
+      <p class="post-contenido text-justify">
+        <pre class="gambas">
+          <span class="dim">Dim</span> nombre As <span class="dim">New</span> <span class="tipoDato">tipoDato</span>[tamañoDimensión1, tamañoDimensión2, ..., tamañoDimensiónN]</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        El espacio que los arreglos ocupan en memoria se reserva en el momento de realizar la declaración de los mismos. A continuación se presentan diferentes ejemplos
+        de declaración de arreglos multidimensionales, con su explicación correspondiente.
+      </p>
+      <p class="post-contenido text-justify">
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> a As <span class="dim">New</span> <span class="tipoDato">Integer</span>[5, 10]       <span class="comentario">'Arreglo bidimensional tipo Integer: 5 filas y 10 columnas</span>
+          <span class="dim">Dim</span> b As <span class="dim">New</span> <span class="tipoDato">Float</span>[5, 5]          <span class="comentario">'Arreglo bidimensional tipo Float: 5 filas y 5 columnas</span>
+          <span class="dim">Dim</span> c As <span class="dim">New</span> <span class="tipoDato">Byte</span>[3, 5, 7]        <span class="comentario">'Arreglo de tridimensional tipo Byte</span>
+          <span class="dim">Dim</span> d As <span class="dim">New</span> <span class="tipoDato">String</span>[10, 10, 2, 9]   <span class="comentario">'Arreglo 4 dimensiones tipo String</span>
+        <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Una vez que se definen los arreglos, sus elementos pueden recibir los valores a través de múltiples asignaciones, o bien, como ocurre frecuentemente en la práctica,
+        por medio de ciclos y la lectura correspondiente de los valores.
+      </p>
+      <p class="post-contenido text-justify">
+      <b>Ejemplo 1</b>. Se guarda una matriz de <code>5x5</code> en un arreglo bidimensional. Desarrolle un programa que solicite al usuario el contenido de la matriz e imprima el contenido
+      de dicha matriz.
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> arreglo <span class="dim">As</span> New <span class="tipoDato">Integer</span>[5, 5]
+          <span class="dim">Dim</span> i, j <span class="dim">As</span> <span class="tipoDato">Byte</span>
+
+          <span class="print">Print</span> "<span class="texto">Introduzca el contenido de la matriz</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> 4
+            <span class="for">For</span> j = 0 <span class="for">To</span> 4
+              <span class="print">Print</span> "("; i; ", "; j; ") = ";
+              <span class="input">Input</span> arreglo[i, j]
+            <span class="for">Next</span>
+          <span class="for">Next</span>
+          <span class="print">Print</span> "<span class="texto">Se ingresaron todos los datos, ahora se imprime el contenido</span>"
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> 4
+            <span class="for">For</span> j = 0 <span class="for">To</span> 4
+              <span class="print">Print</span> arreglo[i, j],
+            <span class="for">Next</span>
+            <span class="print">Print</span> ""
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Ahora se explicarán algunos puntos importantes acerca de este programa.
+      </p>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            Tal como se mencionó anteriormente, en los arreglos se necesita de un índice por cada dimensión que este posea. De esta forma, y debido a que el ingreso de datos
+            del arreglo es una operación repetitiva, se necesitan ciclos.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Se utilizarán dos ciclos, uno por dimensión del arreglo. Se hará el recorrido de la matriz por renglones y columnas, se recorren todas las columnas del primer renglón,
+            luego todas las columnas del segundo renglón y así sucesivamente. Por esta razón es que se necesita de ciclos anidados.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            El ciclo exterior se encarga de recorrer los renglones, cuya variable de control <code>i</code> indicará el renglón. El ciclo interior recorrerá las columnas, y
+            su variable de control <code>j</code> indicará la columna. Será necesario entonces que las condiciones inicial y final del ciclo exterior coincidan con la primera
+            dimensión del arreglo (en este ejemplo 0 y 4) y las condiciones inicial y final del ciclo interior coincidan con la segunda dimensión del arreglo (en este ejemplo 0 y 4).
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Así, en la primera iteración del ciclo exterior cuando <code>i=0</code>, se ingresa al ciclo interior con la variable <code>j=0</code> hasta que llega a <code>j=4</code>,
+            y para cada valor de <code>j</code> se solicita el valor correspondiente al arreglo en su posición <code>(i,j)</code>. Con esto se llena el primer renglón (con
+            <code>i=0</code>) y este procedimiento se repite hasta que <code>i=4</code>, llenando así toda la matriz de valores ingresados por el usuario.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Los últimos dos ciclos funcionan de la misma forma, sólo que en este caso de imprime el contenido de la matriz. Observe que en el <code>Print</code> más interior
+            se agrega una <code>,</code> que ocasiona que se imprima el contenido de la localidad del arreglo y posteriormente se deje un tabulador de espacio. El segundo
+            <code>Print</code> solo hace un salto de línea cuando se termina de imprimir un renglón. Por esta razón es que el resultado de la impresión se ve como en
+            forma rectangular.
+          </p>
+        </li>
+      </ul>
+      <p class="post-contenido text-justify">
+      <b>Ejemplo 2</b>. Realice un programa que reciba el contenido de dos matrices bidimensionales <code>4x5</code> y realice la suma de ellas. Almacene el resultado de la suma en un arreglo
+      bidimensional e imprima el contenido.
+      <pre class="gambas">
+        <span class="inicio">Public</span> <span class="dim">Const</span> M <span class="dim">As</span> <span class="tipoDato">Byte</span> = 4
+        <span class="inicio">Public</span> <span class="dim">Const</span> N <span class="dim">As</span> <span class="tipoDato">Byte</span> = 5
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> a, b, c <span class="dim">As</span> New <span class="tipoDato">Integer</span>[M, N]
+          <span class="dim">Dim</span> i, j <span class="dim">As</span> <span class="tipoDato">Byte</span>
+
+          <span class="print">Print</span> "<span class="texto">Ingrese la primer matriz</span>"
+          <span class="funcion">ingresarMatriz</span>(a)
+
+          <span class="print">Print</span> "<span class="texto">Ingrese la segunda matriz</span>"
+          <span class="funcion">ingresarMatriz</span>(b)
+
+          <span class="print">Print</span> "<span class="texto">La suma de las matrices ingresdas es la siguiente</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> M - 1
+            <span class="for">For</span> j = 0 <span class="for">To</span> N - 1
+              c[i, j] = a[i, j] + b[i, j]
+              <span class="print">Print</span> c[i, j],
+            <span class="for">Next</span>
+            <span class="print">Print</span> ""
+          <span class="for">Next</span>
+        <span class="fin">End</span>
+
+        <span class="funcion">Public Function ingresarMatriz</span>(x <span class="dim">As</span> <span class="tipoDato">Integer</span>[])
+          <span class="dim">Dim</span> i, j <span class="dim">As</span> <span class="tipoDato">Byte</span>
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> M - 1
+            <span class="for">For</span> j = 0 <span class="for">To</span> N - 1
+              <span class="print">Print</span> "("; i; ", "; j; ") = ";
+              <span class="input">Input</span> x[i, j]
+            <span class="for">Next</span>
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+      </p>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            En este ejemplo se requiere que el usuario ingrese las matrices que se guardarán en los arreglos bidimensionales <code>a</code> y <code>b</code> tipo <code>Integer</code>
+            de dimensiones <code>4x5</code>. Se utilizan las constantes <code>M</code> y <code>N</code> para simplificar el código, observe que si se cambia su valor el programa se adapta a las nuevas
+            dimensiones sin necesidad de modificar el código.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Debido a que esta es una operación que se repetirá un par de veces, conviene escribir el código una sola vez creando una función con el código en cuestión. Ahora
+            solo sería necesario invocar a la función cuando sea necesario, en lugar de escribir dos veces un código casi idéntico.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Observe la forma como se declara la función. Esta recibe como argumento un arreglo de 4x5, sin embargo en la declaración no se hace referencia a las dimensiones
+            del arreglo, <code>x As Integer[]</code> solo indica que será un arreglo tipo <code>Integer</code> por lo que recibirá cualquier arreglo con estas características
+            sin importar sus dimesiones.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            La rutina principal hace dos llamadas a la función <code>ingresarMatriz</code> con dos argumentos diferentes, las matrices que se desean llenar. Nótese que sólo
+            se recibe como argumento el arreglo que se desea llenar sin embargo este no se devuelve con <code>Return</code>. Esto no es necesario debido a que cuando se pasa
+            como parámetro un Arreglo o un Objeto, Gambas hace un paso por referencia. En palabras simples, esto quiere decir que al enviar como parámetro un arreglo, se
+            ingresarán los valores directamente en el arreglo recibido como parámetro.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            Los ciclos anidados en la rutina principal realizan la suma de los valores contenidos en los arreglos <code>a</code> y <code>b</code>, resultado que se almacena
+            en la misma posición pero del arreglo <code>c</code>. Posterior a la suma se hace la impresión, de la misma forma que en el ejemplo anterior para que la impresión
+            tenga forma rectangular.
+          </p>
+        </li>
+      </ul>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 3</b>. Realice un programa en Gambas que genere una matriz <code>5x5</code> con números aleatorios entre <code>0</code> y <code>50</code>.
+        Posteriormente obtenga lo siguiente:
+        <ol type="a">
+          <li>La suma de todos los elementos de los renglones 1, 3 y 5</li>
+          <li>La suma de todos los elementos de las columnas 2 y 4</li>
+          <li>La suma de los elementos en la diagonal principal de la matriz</li>
+          <li>La suma de los elementos en la diagonal invertida de la matriz</li>
+        </ol>
+      </p>
+    </article>
+
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+' Gambas class file
+
+Public tablero As New Byte[3, 3]
+Public turno As Byte
+Public ganador As Byte
+
+Public Sub _new()
+End
+
+Public Sub Form_Open()
+  ' 0 => Posicion vacia
+  ' 1 => Posicion ocupada por el jugador 1
+  ' 2 => Posicion ocupada por el jugador 2
+
+  turno = 0
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+End
+
+
+Public Sub PictureBox2_MouseDown()
+  ' Posicion 1,1
+  
+  If tablero[0, 0] = 0 Then
+    tablero[0, 0] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox2.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox2.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+End
+
+
+Public Sub PictureBox3_MouseDown()
+  ' Posicion 1,2
+  
+  If tablero[0, 1] = 0 Then
+    tablero[0, 1] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox3.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox3.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox4_MouseDown()
+  ' Posicion 1,3
+  
+  If tablero[0, 2] = 0 Then
+    tablero[0, 2] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox4.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox4.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox5_MouseDown()
+  ' Posicion 2,1
+  
+  If tablero[1, 0] = 0 Then
+    tablero[1, 0] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox5.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox5.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox6_MouseDown()
+  ' Posicion 2,2
+  
+  If tablero[1, 1] = 0 Then
+    tablero[1, 1] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox6.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox6.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox7_MouseDown()
+  ' Posicion 2,3
+  
+  If tablero[1, 2] = 0 Then
+    tablero[1, 2] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox7.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox7.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox8_MouseDown()
+  ' Posicion 3,1
+  
+  If tablero[2, 0] = 0 Then
+    tablero[2, 0] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox8.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox8.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox9_MouseDown()
+  ' Posicion 3,2
+  
+  If tablero[2, 1] = 0 Then
+    tablero[2, 1] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox9.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox9.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+  
+
+End
+
+Public Sub PictureBox10_MouseDown()
+  ' Posicion 3,3
+  
+  If tablero[2, 2] = 0 Then
+    tablero[2, 2] = ((turno Mod 2) + 1)
+    
+    'Poner la imagen del jugador
+    If ((turno Mod 2) + 1) = 1 Then
+      PictureBox10.Picture = Picture["circulo.jpg"]
+    Else
+      PictureBox10.Picture = Picture["tache.jpg"]
+    Endif
+    
+    turno = turno + 1
+  Else
+    Message.Info("Posicion ocupada")
+  Endif
+  
+  ganador = verificarGanador(tablero)
+  Select ganador
+    Case 1
+      Message.Info("Ganó el jugador 1")
+      Quit
+    Case 2
+      Message.Info("Gano el jugador 2")
+      Quit
+  End Select
+  
+  Label1.Text = "Turno del jugador " & ((turno Mod 2) + 1)
+
+End
+
+Public Function verificarGanador(arreglo As Byte[]) As Byte
+  ' Funcion que verifica si alguien ha ganado
+  ' Devuelve un 1 si ganó el jugador 1, y 2 si ganó el jugador 2
+  ' Devuelve 0 si nadie ha ganado aún
+  ' Verifica si hay posiciones disponibles, si no las hay finaliza el juego
+  
+  Dim i, j, x, ganador As Byte
+  
+  'Diagonal
+  If arreglo[0, 0] <> 0 And arreglo[0, 0] = arreglo[1, 1] And arreglo[0, 0] = arreglo[2, 2] Then
+    Return arreglo[0, 0]
+  Endif
+  
+  'Contra-diagonal
+  If arreglo[0, 2] <> 0 And arreglo[0, 2] = arreglo[1, 1] And arreglo[0, 2] = arreglo[2, 0] Then
+    Return arreglo[0, 2]
+  Endif
+  
+  'Renglones
+  For i = 0 To 2
+    If arreglo[i, 0] <> 0 And arreglo[i, 0] = arreglo[i, 1] And arreglo[i, 0] = arreglo[i, 2] Then
+      Return arreglo[i, 0]
+    Endif
+  Next
+  
+  'Columnas
+  For j = 0 To 2
+    If arreglo[0, j] <> 0 And arreglo[0, j] = arreglo[1, j] And arreglo[0, j] = arreglo[2, j] Then
+      Return arreglo[0, j]
+    Endif
+  Next
+  
+  'Verificar si hay casillas disponibles
+  x = 0
+  For i = 0 To 2
+    For j = 0 To 2
+      If arreglo[i, j] = 0 Then
+        x = x + 1
+      Endif
+    Next
+  Next
+  
+  If x = 0 Then
+    Message.Info("Gato")
+    Quit
+  Else
+    Return 0 'Seguir jugando
+  Endif
+  
+End

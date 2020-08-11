@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Condicionales</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li class="active"><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <!-- If-Then-Else -->
+    <article class="tema clearfix">
+      <h2>If-Then-Else</h2>
+      <p class="post-contenido text-justify">
+        La sentencia <code>If-Then-Else</code> es la más común para tomar una decisión: si se cumple una condición se ejecuta algo, en caso contrario, se ejecuta
+        otra cosa. Existen tres sintaxis para esta instrucción:
+        <ul>
+          <li>
+            La forma simple:
+            <pre class="gambas">
+            <span class="if">If</span> condición <span class="if">Then</span>
+              operaciones
+            <span class="if">EndIf</span></pre>
+            Esta forma permite evaluar una condición y solo en caso de que sea <code>True</code> se ejecuta un <b>conjunto de operaciones</b> que se encuentran hasta
+            antes de <code>EndIf</code>. En caso de que la evaluación de la condición sea <code>False</code> no se hace nada.
+          </li>
+          <li>La forma reducida:
+            <pre class="gambas">
+            <span class="if">If</span> condición <span class="if">Then</span> sentencia_a_ejecutar</pre>
+            Esta forma evalúa la condición y en caso de que sea <code>True</code> se ejecuta <b>una sola instrucción</b>, en caso <code>False</code> no se hace nada.
+            En esta forma no se escribe <code>EndIf</code> al final.
+          </li>
+          <li>
+            La forma extendida:
+            <pre class="gambas">
+            <span class="if">If</span> condición [ { And <span class="if">If</span> | Or <span class="if">If</span> } condición ... ] <span class="if">Then</span>
+              operaciones ...
+            [ <span class="if">Else</span> <span class="if">If</span> [ { And <span class="if">If</span> | Or <span class="if">If</span> } otraCondición ... ] <span class="if">Then</span>
+              otrasOperaciones ... ]
+            [<span class="if">Else</span>
+              otrasOperacionesDistintas ... ]
+            <span class="if">EndIf</span></pre>
+            Esta forma evalúa una condición y en caso de que sea <code>True</code> ejecuta un <b>conjunto de instrucciones</b> y en caso falso se ejecuta <b>otro conjunto
+            distinto de instrucciones</b> que se encuentra luego de la palabra clave <code>Else</code>. Esta forma permite extender la estructura agregando un
+            <code>If</code> y otra condición después del <code>Else</code>, incluso pueden agregarse tantos <code>If</code> adicionales como sea necesario. Sin importar
+            el número de If que agregue, en esta sinatxis solo es necesario escribir un solo <code>EndIf</code> para todos.
+          </li>
+        </ul>
+      </p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+
+    <!-- Ejercicios -->
+    <article class="tema clearfix">
+      <h2>Ejercicios</h2>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 1</b>. Realice un programa en Gambas que solicite la edad del usuario y determine el rango de edad al que pertenece.
+        <ul>
+          <li> 0 < Edad < 2: Bebe</li>
+          <li> 2 <= Edad < 12: Niño</li>
+          <li> 12 <= Edad < 18: Adolescente</li>
+          <li> 18 <= Edad < 30: Adulto Jóven</li>
+          <li> 30 <= Edad < 65: Adulto</li>
+          <li> Edad >= 65: Tercera Edad</li>
+        </ul>
+        En cualquier otro caso indique un error al usuario.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 2</b>. Realice un programa en Gambas que solicite un número al usuario y evalúe la función signo.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 3</b>. Realice un programa en Gambas que solicite un número al usuario y devuelva el valor absoluto.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 4</b>. Realice un programa para resolver una ecuación de segundo grado. Utilice la versión extendida del algoritmo
+        (la que considera raíces no reales).
+      </p>
+    </article>
+
+    <!-- Select-Case-Default -->
+    <article class="tema clearfix">
+      <h2>Select-Case-Default</h2>
+      <p class="post-contenido text-justify">
+        Algunas ocasiones el flujo de un programa necesita revisar varias condiciones sobre una misma variable, produciendo un <code>If</code> dentro de otro
+        (<code>If</code> anidado). Esa estructura no es cómoda de leer ni produce un código limpio aunque su ejecución es óptima para los compiladores modernos.
+        Para estos casos existe la sentencia <code>Select</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Sintaxis</b>:
+        <pre class="gambas">
+          <span class="if">Select</span> [ Case ] condición
+            [ <span class="if">Case</span> valor [ <span class="if">To</span> valor #2] [, ...] ... ]
+            [ <span class="if">Case</span> valor [ <span class="if">To</span> valor #2] [, ...] ... ]
+            [ { <span class="if">Case</span> <span class="if">Else</span> | <span class="if">Default</span> }
+              ... ]
+          <span class="if">End</span> <span class="if">Select</span></pre>
+      </p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+
+    <article class="tema clearfix">
+      <h2>Ejercicio</h2>
+      <p class="post-contenido text-justify">
+        <b>Ejercicio 5</b>. Realice un programa que solicite dos números cualesquiera, luego debe pedirse un número que seleccionará alguna operación aritmética. Si introduce
+        1 los números se deben sumar, si introduce 2 los números se deben restar, si es 3 los números se multiplican y si introduce 4 los números se dividen. Independientemente
+        de la selección, imprima el resultado.
+      </p>
+    </article>
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

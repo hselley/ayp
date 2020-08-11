@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Cadenas</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li class="active"><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema clearfix">
+      <h2>Cadenas</h2>
+    </article>
+    <article class="tema clearfix">
+      <p class="post-contenido text-justify">
+        Las cadenas de caracteres son indispensables en el desarrollo de casi cualquier aplicación. Vayamos al inicio del concepto.
+      </p>
+      <p class="post-contenido text-justify">
+        Un <b>caracter</b> es la unidad mínima de información que corresponde aproximadamente con un grafema o con una unidad o símbolo parecido, como los del alfabeto o silabario de la forma
+        escrita de un lenguaje natural.<sup><a href="https://es.wikipedia.org/wiki/Car%C3%A1cter_%28tipo_de_dato%29">1</a></sup>
+      </p>
+      <p class="post-contenido text-justify">
+        Un ejemplo de caracter es una letra, un número o un signo de puntuación. El concepto también abarca a los caracteres de control, que no se corresponden con símbolos del lenguaje
+        natural sino con otros fragmentos de información usados para procesar textos, tales como el retorno de carro y el tabulador, así como instrucciones para impresoras y otros
+        dispositivos que muestran dichos textos (como el avance de página). <sup><a href="https://es.wikipedia.org/wiki/Car%C3%A1cter_%28tipo_de_dato%29">1</a></sup>
+      </p>
+      <p class="post-contenido text-justify">
+        Un caracter es un dato que puede ser letras del abecedario (a, b, c,..., z), dígitos (0, 1, 2, ..., 9) o símbolos especiales (#, $, ^, *, %, /, !, etc.). Existen 256 caracteres
+        basicos que las computadoras pueden manejar, esta lista de caracteres tiene el nombre de código ASCII (American Standard Code for Information Interchange — Código Estándar
+        Estadounidense para el Intercambio de Información).
+      </p>
+      <img src="img/cadenas/codigoAscii.jpg" width="" alt="Código ASCII" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        Enxiste un tipo de dato especial para <em>caracteres</em>. Un dato tipo <em>caracter</em> contiene un solo símbolo (caracter) y se escribe entre apóstrofe. Ejemplo:
+      </p>
+      <p class="ejemplo">
+          'a'    'B'    '$'    '9'    '-'    '@'    '#'
+      </p>
+      <p class="post-contenido text-justify">
+        Cabe mencionar que los caracteres solo tienen valor como símbolo, no de otro tipo. Por esta razón ocurre lo siguiente:
+      </p>
+      <p class="ejemplo">
+        '9' != 9
+      </p>
+      <p class="post-contenido text-justify">
+        Esto ocurre debido a que <code>'9'</code> es un caracter, es decir un símbolo sin valor numérico, mientras que <code>9</code> representa el valor numérico de <em>nueve</em>. Por esa razón
+        es que son diferentes ya que uno de ellos es un símbolo y el otro es un número.
+      </p>
+      <p class="post-contenido text-justify">
+        Para entender la diferencia considere lo siguiente. Observe la imágen a continucación y responda la pregunta: <b>¿qué es?</b>
+      </p>
+      <img src="img/cadenas/taza.jpg" width="200px" alt="taza" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        Si usted respondió: "<b>una taza</b>", lamento decir que está equivocado. En realidad es una fotografía de una taza. Una cosa es la taza y otra cosa diferente es la fotografía
+        de la taza. Esa misma diferencia existe entre los símbolos y lo que representan, misma diferencia entre el caracter <code>'9'</code> y el número <code>9</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        Por otro lado, existen las cadenas. Un tipo de dato <b>cadena de caracteres</b> es un conjunto de caracteres, y típicamente se escribe entre comillas. Este tipo de dato se llama
+        así debido a la forma como los caracteres se acomodan, uno tras otro, como un tren de caracteres. Ejemplo:
+      </p>
+      <p class="ejemplo">
+        "abcde"    "cadena de caracteres"    "Hola Mundo"  "12345"  "abc123"
+      </p>
+      <p class="post-contenido text-justify">
+        En Gambas existe un tipo de Datos para manejar caracteres y cadenas: <code>String</code>. Para declarar una variable que contendrá caracteres o cadenas, se hace de la misma forma que
+        cualquier variable. La sintaxis es la siguiente:
+        <pre class="gambas">
+      <span class="dim">Dim</span> cadena <span class="dim">As</span> <span class="tipoDato">String</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        En los lenguajes de programación se le llama <b>concatenación</b> a la acción de juntar una cadena a otra, sería lo equivalente a sumarlas.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 1</b>. Desarrollar un programa que solicite nombre, apellido y edad. Posteriormente imprima esta información en una sola línea.
+    <pre class="gambas">
+      <span class="inicio">Public Sub Main()</span>
+        <span class="dim">Dim</span> nombre, apellido As <span class="tipoDato">String</span>
+        <span class="dim">Dim</span> edad As <span class="tipoDato">Byte</span>
+
+        <span class="print">Print</span> "<span class="texto">Introduzca su nombre: </span>";
+        <span class="input">Input</span> nombre
+
+        <span class="print">Print</span> "<span class="texto">Introduzca su apellido: </span>";
+        <span class="input">Input</span> apellido
+
+        <span class="print">Print</span> "<span class="texto">Introduzca su edad: </span>";
+        <span class="input">Input</span> edad
+
+        <span class="print">Print</span> "<span class="texto">Hola </span>"; nombre; "<span class="texto"> </span>"; apellido; "<span class="texto">, usted tiene </span>"; edad; "<span class="texto"> años.</span>"
+      <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que se han declarado dos variables como <code>String</code>: <code>nombre</code> y <code>apellido</code>. Se declara además una tercera variable <code>edad</code> como
+        <code>Byte</code>. Posteriormente se solicita la información al usuario. Observe como concatena el programa todas las cadenas para imprimirlas en pantalla. En términos generales,
+        cuando algo se imprime en pantalla se convierte al tipo de dato <code>String</code> independientemente del tipo de dato que sea.
+      </p>
+      <p class="post-contenido text-justify">
+        Existen funciones especiales para el manejo de cadenas en Gambas, algunas de ellas son <code>CStr</code> y <code>Str</code> para convertir una expresion en una
+        cadena de caracteres; mientras que <code>Val</code> convierte una cadena de caracteres en un valor numérico.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 2.</b> Convertir el valor númerico de una variable a una cadena de caracteres con la función <code>Str</code> e imprimir el resultado.
+    <pre class="gambas">
+      <span class="inicio">Public Sub Main()</span>
+        <span class="dim">Dim</span> nombre, edad, cadena As <span class="tipoDato">String</span>
+        <span class="dim">Dim</span> x As <span class="tipoDato">Byte</span>
+
+        nombre = "<span class="texto">Carlos</span>"
+        x = 20
+        edad = <span class="funcion">Str</span>(x)
+
+        cadena = "<span class="texto">Mi nombre es </span>" & nombre & "<span class="texto"> y tengo </span>" & edad & "<span class="texto"> años</span>"
+
+        <span class="print">Print</span> cadena
+      <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que en este ejemplo se utilizó la función <code>Str</code> para convertir la edad, que se encontraba en una variable tipo <code>Byte</code>.
+        Posteriormente se formó la cadena a imprimir utilizando la concatenación a través del operador <code>&</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 3</b>. Convertir la cadena "123" en entero utilizando la función Val, luego sume ese número con 321.
+    <pre class="gambas">
+      <span class="inicio">Public Sub Main()</span>
+        <span class="dim">Dim</span> cadena As <span class="tipoDato">String</span>
+        <span class="dim">Dim</span> x As <span class="tipoDato">Float</span>
+
+        cadena = "<span class="texto">123</span>"
+        x = <span class="funcion">Val</span>(cadena)
+
+        Print "<span class="texto">La suma es: </span>"; x + 321
+      <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que la variable cadena se le asignó la cadena de caracteres "<code>123</code>", posteriormente y utilizando la función <code>Val</code>, se
+        convierte en el número <code>123</code> y se almacena en la variable <code>x</code> tipo <code>Byte</code>. Justo donde está el <code>Print</code>,
+        y antes de imprimirse en pantalla, se hace la suma del valor convertido y contenido en <code>x</code> con el número <code>321</code>. Por lo tanto
+        se imprime el número <code>444</code>.
+      </p>
+
+
+    </article>
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

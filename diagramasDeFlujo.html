@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Diagrama de Flujo</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li class="active"><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema clearfix">
+      <h2>Herramientas para la elaboración  de algoritmos: Diagrama de flujo</h2>
+    </article>
+    <article class="tema clearfix">
+      <h2>Diagrama de Flujo</h2>
+        <p class="post-contenido text-justify">Un <a href="https://es.wikipedia.org/wiki/Diagrama_de_flujo">diagrama de flujo</a> representa la esquematización
+        gráfica de un algoritmo. En realidad muestra gráficamente los pasos o procesos a seguir para alcanzar la solución de un problema. Su correcta construcción
+        es sumamente importante porque a partir del mismo se escribe un programa en algún lenguaje de programación. Si el diagrama de flujo está completo y correcto,
+        el paso del mismo a un lenguaje de programación es relativamente simple y sencillo.</p>
+
+        <p class="post-contenido text-justify">Un diagrama de flujo debe ilustrar gráficamente los pasos o procesos a seguir para alcanzar la solución
+        de un problema. Los símbolos presentados, colocados adecuadamente, permiten crear una estructura gráfica flexible que ilustra los pasos a seguir para
+        alcanzar un resultado específico. El diagrama de flujo facilitará más tarde la escritura del programa en algún lenguaje de programación. </p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr class="info">
+                <th class="textoTabla">Símbolo</th>
+                <th class="textoTabla">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/inicioFin.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para marcar el inicio y el fin del diagrama de flujo.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/input.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para introducir los datos de entrada. Expresa lectura.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/proceso.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para representar un proceso. En su interior se expresan asignaciones, operaciones aritméticas,
+                  cambios de valor de celdas en memoria, etc.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/siNo1.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para representar una decisión. En su interior se almacena una condición, y dependiendo del
+                  resultado de la misma se sigue por una de las ramas o caminos alternativos. Este símbolo se utiliza en la estructura
+                  selectiva si entonces y en las estructuras repetitivas repetir y mientras.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/siNo2.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para representar la estructura selectiva doble si entonces/sino. En su interior se almacena una
+                  condición. Si el resultado es verdadero se continúa por el camino de la izquierda, y si es falso por el camino de
+                  la derecha.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/siNoMultiple.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para representar una decisión múltiple. En su interior se almacena un selector, y dependiendo del
+                  valor de dicho selector se sigue por una de las ramas o caminos alternativos. Este símbolo se utiliza en la estructura
+                  selectiva si múltiple.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/escritura.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para representar la impresión de un resultado. Expresa escritura.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/direccion.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolos utilizados para expresar la dirección del flujo del diagrama.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/conexion1.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para expresar conexión dentro de una misma página.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/conexion2.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para expresar conexión entre páginas diferentes.
+                </p></td>
+              </tr>
+              <tr>
+                <td><img src="img/diagramaDeFlujo/modulo.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+                <td><p class="textoTabla">
+                  Símbolo utilizado para expresar un módulo de un problema. En realidad expresa que para continuar
+                  con el flujo normal del diagrama deberemos primero resolver el subproblema que enuncia su interior.
+                </p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="post-contenido text-justify">Reglas para armar un diagrama de flujo:
+        <ul>
+          <li>Todo diagrama de flujo debe tener un inicio y un fin.</li>
+          <li>Las líneas utilizadas para indicar la dirección del flujo del diagrama deben ser rectas verticales y horizontales.</li>
+          <li>Todas las líneas utilizadas para indicar la dirección del flujo del diagrama deben estar conectadas. La conexión puede ser a un símbolo que exprese lectura, proceso, decisión, impresión, conexión o fin de diagrama.</li>
+          <li>El diagrama de flujo debe ser construido de arriba hacia abajo y de izquierda a derecha.</li>
+          <li>La notación utilizada en el diagrama de flujo debe ser independiente del lenguaje de programación. La solución presentada en el diagrama puede escribirse posterior y fácilmente en algún lenguaje de programación.</li>
+          <li>Es conveniente cuando realizamos una tarea compleja poner comentarios que expresen o ayuden a entender lo que hicimos.</li>
+          <li>Si el diagrama de flujo requiriera más de una hoja para su construcción, debemos utilizar los conectores adecuados y numerar las páginas.</li>
+          <li>No puede llegar más de una línea a un símbolo.</li>
+        </ul>
+        </p>
+      </article>
+
+      <article class="tema clearfix">
+        <h2>Ejercicios</h2>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 1</b>. Realice el diagrama de flujo de un algoritmo que convierta su edad en segundos. El algoritmo debe
+          recibir como datos de entrada los años, meses y días de su edad y calcular la cantidad de segundos que usted haya vivido.
+        </p>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 2</b>. Realice el diagrama de flujo de un algoritmo que calcule la distancia entre dos puntos, tomando
+          como datos de entrada las coordenadas de los puntos P1 y P2.
+        </p>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 3</b>. Realizar el diagrama de flujo de un algoritmo que calcule el promedio de las 5 calificaciones de un alumno.
+        </p>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 4</b>. Realizar un diagrama de flujo del algoritmo que resuelve una ecuación de segundo grado mediante
+          la fórmula general.
+        </p>
+      </article>
+
+      <!-- Estructura Condicional -->
+      <article class="tema clearfix">
+        <h2>Estructura Condicional</h2>
+
+        <p class="post-contenido text-justify">
+          Las estructuras lógicas selectivas se encuentran en la solución algorítmica de casi todo tipo de problemas. Las utilizamos
+          cuando en el desarrollo de la solución de un problema debemos <em>tomar una decisión</em>, para establecer un proceso o señalar un camino
+          alternativo a seguir.
+        </p>
+        <p class="post-contenido text-justify">
+          Esta toma de decisión se basa en la evaluación de una o más condiciones que nos señalarán como alternativa o consecuencia, la
+          <em>rama</em> a seguir.
+        </p>
+
+        <p class="post-contenido text-justify">
+          Hay situaciones en las que la toma de decisiones se realiza en cascada. Es decir, se toma una decisión, se marca la rama correspondiente
+          a seguir, se vuelve a tomar otra decisión y así sucesivamente. Por lo que para alcanzar la solución de un problema o subproblema debemos
+          aplicar prácticamente un árbol de decisión.
+        </p>
+        <p class="post-contenido text-justify"></p>
+
+        <p class="post-contenido text-justify">
+          La estructura <code>si entonces</code> permite que el flujo del diagrama siga un camino específico si se cumple una condición o un conjunto
+          de condiciones. Si al evaluar la condición el resultado es verdadero se ejecuta(n) cierta(s) operación(es). Esta estructura se dice que
+          es binaria dado que solo tiene dos posibles respuestas: <code>si</code> o <code>no</code>.
+        </p>
+        <img src="img/diagramaDeFlujo/condicional.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+      </article>
+
+      <article class="tema clearfix">
+        <h2>Ejercicio</h2>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 5</b>. Realizar un diagrama de flujo de un algoritmo que solicite un número al usuario y determine si este número es positivo,
+          negativo o cero.
+        </p>
+      </article>
+
+      <!-- Estructura Condicional Múltiple -->
+      <article class="tema clearfix">
+        <h2>Estructura Condicional Múltiple</h2>
+        <p class="post-contenido text-justify">
+          La estructura selectiva permite que el flujo del diagrama se bifurque por varias ramas en el punto de la toma de decisión(es), esto en
+          función del valor que tome el selector. El selector múltiple, a diferencia del selector simple, no es binario sino que tiene 3 o más
+          posibles ramas para la decisión.
+        </p>
+        <img src="img/diagramaDeFlujo/condicionalMultiple.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+
+        <p class="post-contenido text-justify">
+          Este tipo de selector permite elegir entre un número determinado de posibilidades, un número discreto (finito) de ellas. Por esta razón es que si
+          se necesita evaluar un conjunto contínuo (infinito) de posibles valores, este tipo de selector no es apropiado para ello.
+        </p>
+      </article>
+
+      <article class="tema">
+        <h2>Ejericio</h2>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 6</b>. Realice un diagrama de flujo que solicite dos números cualesquiera, luego debe pedirse un número que seleccionará alguna operación
+          aritmética. Si introduce 1 los números se deben sumar, si introduce 2 los números se deben restar, si es 3 los números se multiplican y si introduce 4
+          los números se dividen. Independientemente de la selección, imprima el resultado.
+        </p>
+      </article>
+
+
+      <!-- Estructuras Algorítmicas Repetitivas -->
+      <article class="tema clearfix">
+        <h2>Estructuras Algorítmicas Repetitivas</h2>
+        <p class="post-contenido text-justify">
+          En la construcción de algoritmos para resolver un problema específico es muy común encontrarse con la necesidad de repetir alguna operación
+          para la realización de esa tarea. En dicha repetición, que a partir de ahora llamaremos <code>iteración</code>, puede ser necesario resolver
+          alguna(s) operación(es) aritmética(s) o la evaluación de alguna decisión. En cualquier caso se necesitan de las estructuras algorítmicas repetitivas.
+        </p>
+        <p class="post-contenido text-justify">
+          Todo ciclo debe terminar de ejcutarse luego de un número finito de iteraciones, por lo que es necesario verificar la(s) condición(es) en cada iteración
+          para determinar si se debe continuar la ejecución o detenerse.
+        </p>
+        <p class="post-contenido text-justify">
+          De esta forma todos los ciclos tienen estos tres elementos:
+          <ul>
+            <li><b>Condición Inicial</b>: Es el punto de partida del ciclo, debe ser una condición verdadera para que el ciclo pueda iniciar.</li>
+            <li><b>Condición Final</b>: Establece el punto final del ciclo, una vez que se cumpla la condición el ciclo deberá terminar.</li>
+            <li><b>Incremento/Decremento/Cambio</b>: Es el cambio de las variables que controlan el ciclo. El cambio puede ser un incremento, decremento o alguna
+              otra condición.</li>
+          </ul>
+        </p>
+
+        <ul>
+          <li>
+            <h2>Estructura Repetitiva <code>repetir</code></h2>
+            <p class="post-contenido text-justify">
+              La estructura <code>repetir</code> conocida comúnmente como <code>for</code>, es la estructura algorítmica cuya característica principal es que
+              <b>se sabe de antemano el número de iteraciones que ocurrirán</b>. Este tipo de estrcutura está presente en todos los lenguajes de programación.
+            </p>
+            <p class="post-contenido text-justify">
+              El diagrama de flujo de la estructura <code>repetir</code> es el siguiente:
+            </p>
+            <img src="img/diagramaDeFlujo/repetir.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+            <p class="post-contenido text-justify">
+              Para utilizar este ciclo se debe establecer un punto de partida, un fin y como se progresará desde el inicio al final; es decir, una condición incial,
+              una condición final y un cambio. Como se sabe toda esta información de antemano, por lo tanto se sabe el número de iteraciones que realizará el ciclo. El
+              control de las iteraciónes lo realiza una <code>variable de control</code>.
+            </p>
+            <p class="post-contenido text-justify">
+              Para comenzar el ciclo, la variable de control toma el valor establecido en la condición inicial y se evalúa contra la condición final, y si el resultado
+              de dicha evaluación es verdadero se realiza una iteración del ciclo. Dentro del ciclo hay una o muchas operaciones que se pueden llevar a cabo, y al final
+              de todas ellas debe ocurrir un incremento, decremento o un cambio en la variable que controla el ciclo.
+            </p>
+            <p class="post-contenido text-justify">
+              Por ejemplo, considere que existe una <code>operación X</code> que necesita ser realizada 10 veces. Debemos definir la variable de control del ciclo,
+              digamos <code>i</code>. Dicha variable <code>i</code> deberá contar el número de iteraciones, es decir, deberá comenzar con un valor de 1 y terminará
+              cuando valga 10. Por lo tanto, la condición inicial es <code>i=1</code>, la condición final <code>i=10</code> y el cambio
+              de la variable es un incremento en 1.
+            </p>
+            <p class="post-contenido text-justify">
+              El diagrama de flujo correspondiente es el siguiente:
+            </p>
+            <img src="img/diagramaDeFlujo/ejemploFor1.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+            <p class="post-contenido text-justify">
+              Observe que la condición final se estableció como <code>i<=10</code> siendo quizás la manera más obvia <code>i!=10</code>, para entender el porque considere
+              lo siguiente. Dado que la variable <code>i</code> comienza en <code>1</code> y el incremento también es en <code>1</code>, todos los valores que tomará la
+              variable <code>i</code> dentro del ciclo son menores o iguales que <code>10</code>, razón por la cual se establece de esa forma.
+            </p>
+            <p class="post-contenido text-justify">
+              Considere además que si
+              pusieramos como condición <code>i!=10</code> el ciclo funcionaría de manera idéntica para este ejemplo, pero si por alguna razón en algún momento de la
+              ejecución del ciclo la variable <code>i</code> tomara un valor distinto a los esperados, no tendríamos forma de saberlo y esto ocasionaría que el ciclo se
+              comportara de maneras inesperadas. Este tipo de situaciones son comunes sobre todo cuando los algoritmos son más complejos y existen más operaciones dentro
+              del ciclo. Por esta razón es más conveniente optar por esta convención ya que nos evitará problemas en el futuro.
+            </p>
+          </li>
+
+          <li>
+            <h2>Estructura Repetitiva <code>Mientras</code></h2>
+            <p class="post-contenido text-justify">
+              La estructura <code>mientras</code> conocida comúnmente como <code>while</code>, es la estructura algorímtica cuya característica principal
+              es que <b>no se sabe de antemano el número de iteraciones que ocurrirán</b>. Esta estructura también se encuentra presente en todos los lenguajes
+              de programación.
+            </p>
+            <p class="post-contenido text-justify">
+              El diagrama de flujo de la estructura <code>mientras</code> es el siguiente:
+            </p>
+            <img src="img/diagramaDeFlujo/mientras.png" alt="" class="imgcenter img-rounded img-responsive"></td>
+            <p class="post-contenido text-justify">
+              Para utilizar este ciclo se debe establecer un punto de partida y un final; es decir, una condición incial y una condición final. El control de las
+              iteraciónes lo realiza una <code>variable de control</code>. Para comenzar el ciclo la variable de control toma el valor de la condición inicial y
+              en cada iteración se evalúa esta variable de control contra la condición final. El ciclo realizará iteraciones mientras tal evaluación sea verdadera.
+            </p>
+            <p class="post-contenido text-justify">
+              A diferencia de <code>repetir</code>, en el ciclo <code>mientras</code> no se sabe necesariamente con exactitud como cambia la variable de control,
+              lo que si se debe saber con precisión es donde comienza el ciclo y donde termina. Por lo tanto, como no se sabe toda esa información, tampoco se
+              sabe el número de iteraciones que realizará el ciclo.
+            </p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="tema">
+        <h2>Ejericios</h2>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 7</b>. Realice un diagrama de flujo del algoritmo que suma los primeros 100 números enteros.
+        </p>
+        <p class="post-contenido text-justify">
+          <b>Ejercicio 8</b>. Construya un diagrama de flujo de un algoritmo que solicita números al usuario y haga la suma de todos ellos. El algoritmo debe
+          solicitar números siempre y cuando el número ingresado sea positivo, si el usuario ingresa un número no positivo el algoritmo debe terminar e imprimir
+          la suma de los números positivos.
+        </p>
+
+      </article>
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

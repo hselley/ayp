@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Proyectos Finales</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li class="active"><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema clearfix">
+      <h2>Evaluación y Entrega</h2>
+      <p class="post-contenido text-justify">
+        Estas son las características de la entrega de los proyectos, así como las fechas de entrega y evaluación de los mismos.
+      </p>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Modalidad</b>: El proyecto final es individual y se asigna por sorteo</p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Fecha de entrega</b>: Miércoles 23 de Noviembre y Viernes 25 de Novimebre. La fecha de entrega también se asigna por sorteo.
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            La entrega de proyecto consiste en lo siguiente:
+              <ul>
+                <li>
+                  Presentación al profesor del programa.
+                </li>
+                <li>
+                  Reporte del proyecto: Contiene portada doble, objetivos, reglas del juego en las que se basaron para programarlo y conclusiones.
+                </li>
+              </ul>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Rúbrica</b>:
+              <ul>
+                <li><b>Lógica</b>: 25% (cómo se solucionó el problema, lógica de programación, algoritmos óptimos)</li>
+                <li><b>Código</b>: 25% (herramientas utilizadas, orden y estructura del código)</li>
+                <li><b>Gráficos</b>: 25% (calidad de los gráficos, diseño de pantallas y creatividad)</li>
+                <li><b>Interfaz</b>: 25% (interfaz con el usuario, que tan fácil es interactuar con el  programa, utilización de botones, mouse,etc.)</li>
+              </ul>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Consideraciones adicionales</b>:
+              <ul>
+                <li><p class="post-contenido text-justify">
+                  Por supuesto el programa hace lo que debe hacer, en caso contrario no es aprobatorio.</p></li>
+                <li><p class="post-contenido text-justify">
+                  Ningún juego es en red. Si son varios jugadores, se tira por turnos en la misma computadora.</p></li>
+                <li><p class="post-contenido text-justify">
+                  Todos los juegos deben incluir gráficos, instrucciones en pantalla y la mayor cantidad de marcadores (scores) y estadísticas posibles.</p></li>
+                <li><p class="post-contenido text-justify">Se seleccionarán los dos mejores proyectos del grupo, los cuales participarán en un concurso en el que
+                  se seleccionará el mejor proyecto entre todos los grupos de Algoritmos y Programación del semestre en curso. El ganador tendrá un premio y un
+                  reconocimiento con valor curricular.</p></li>
+              </ul>
+          </p>
+        </li>
+
+    </article>
+
+    <article class="tema clearfix">
+      <h2>Lista de Proyectos Finales y Requerimientos Mínimos</h2>
+      <p class="post-contenido text-justify">
+        Estos son los proyectos finales que desarrollarán para este curso. A continuación se listan todos los proyectos y se especifican las características que deben cumplir
+        para la entrega final.
+      </p>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Loteria</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 jugadores con tableros aleatorios de 4x3, no se pueden repetir las cartas en cada tablero.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La máquina sortea las 54 cartas aleatoriamente.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Cada usuario debe ir marcando con una imagen sobrepuesta las cartas que van saliendo, la computadora debe validar cada tiro.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Batalla Naval  (submarino)</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                1 Jugador humano.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La Máquina asigna aleatoriamente los barcos (de distintos tamaños), el usuario trata de encontrarlos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Tablero de 10x10.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Memoria (memorama)</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                18 pares (tablero de 6x6).
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                2 a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Máquina revuelve las cartas aleatoriamente.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Si se hace un par se deben retirar las cartas.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Serpientes y escaleras</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                100 casillas.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La llegada es exacta.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se debe visualizar el recorrido de las fichas.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Animación del dado.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Juego de la Oca</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                63 casillas.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La llegada es exacta.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se debe visualizar el recorrido de las fichas.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Animación de los dados.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Conecta 4 (4 en línea)</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Tablero de 6x7.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se debe visualizar el recorrido de las fichas.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Mente maestra (master mind)</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                1 jugador humano.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                12 intentos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Computadora asigna aleatoriamente la combinación de 4 fichas de 6 colores posibles.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Los colores se pueden repetir.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Para poder revisar el programa, es necesario imprimir la combinación que la computadora seleccionó.
+              </p>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Fabuloso Fred (juego de memoria  también llamado simón dice)</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                1 a 4 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                9 colores.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Computadora asigna aleatoriamente las secuencias.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Si el juego es de 2 o más jugadores, debe haber la opción de que todos jueguen con la misma secuencia o cada quien la suya.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Adivina quién</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                1 jugador humano.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Tablero de 6x4 personajes, 24 en total.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Mínimo 10 características (pelo, genero, ojos, etc).
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Computadora asigna aleatoriamente el personaje oculto.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La computadora debe validar cada tiro.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Competencia de Rompecabezas</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 jugadores humanos con 2 tableros, tirando por turnos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Rompecabezas de 4X4 piezas con 6 imágenes aleatorias.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Los dos jugadores no pueden tener la misma imagen.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Gana el primero que complete su rompecabezas.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                La computadora valida si las piezas están en la posición correcta y si ya se ha completado cada rompecabezas.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Lince</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 jugadores a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Tablero aleatorio de 8 X 8 imágenes, 64 en total.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Gana el primero que encuentre 15 imágenes.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se reparten 3 imágenes a cada jugador sin que se repitan, las cuales debe encontrar en el tablero.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Cada jugador marca las cartas que va encontrando.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ruleta</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Preguntar a cuantos tiros de la ruleta se jugará la partida.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Animación del tiro en la ruleta.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Tablero.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Apuestas: Juego a 1, 2, 3, 4, 6, 12 o 18 números con sus diversos pagos a 1.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Cubilete</b>
+          </p>
+          <ul>
+            <li>
+              <p class="post-contenido text-justify">
+                2 a 6 jugadores humanos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Animación del tiro del cubilete y los dados.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Inicialmente, cada jugador tira un dado. El que saque el mayor valor "pone tiro". De haber empate se puede ir a una segunda vuelta.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                El jugador que "pone tiro" puede tirar los dados hasta tres veces y seleccionar el grupo de caras (Ases, Reyes, Reinas, Jacks, Gallegos o Negros) que en su opinión sea más difícil de "matar".
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                El turno al tiro rota por la mano derecha.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Los Ases sirven como comodines y pueden tomar el lugar de cualquier cara en un grupo.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                El valor de la cara es: As, K, Q, J, 8, 7.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se juega a 10 puntos.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Se le llama Carabina a la tirada 5 Ases o Reyes.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Una Carabina de Ases vale 10 puntos y termina el juego.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Una Carabina de Reyes Natural (sin Ases) vale 5 puntos y termina la ronda.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Una Carabina de Reyes "sucia" (con Ases) vale 2 puntos y termina la ronda.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Si no se logra Carabina gana un punto el jugador con la tirada de más valor.
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                Cada jugador puede hacer tantas tiradas como el que originalmente "puso el tiro"
+              </p>
+            </li>
+            <li>
+              <p class="post-contenido text-justify">
+                “Pone tiro" el jugador que gana el/los punto(s)
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

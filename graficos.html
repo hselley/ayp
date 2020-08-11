@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Aplicaciones Gráficas en Gambas</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li class="active"><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema clearfix">
+      <h2>Introducción</h2>
+    </article>
+    <article class="tema clearfix">
+      <p class="post-contenido text-justify">
+        Gambas es un lenguaje que permite el desarrollo de aplicaciones gráficas de una forma sencilla e intuitiva utilizando pocas líneas de código. Hasta ahora
+        solo hemos realizado programas que se ejecuten en la consola, sin embargo, una de las fortalezas de Gambas es la facilidad para crear interfaces gráficas de usuario.
+      </p>
+      <p class="post-contenido text-justify">
+        Para el desarrollo de aplicaciones gráficas utilizaremos todos los conceptos que hemos visto hasta ahora, y se combinarán con los elementos y la forma de construcción
+        de las aplicaciones gráficas con todos los elementos que Gambas proporciona. Este lenguaje permite realizar aplicaciones gráficas robustas con una cantidad moderada
+        de código y una interfaz amigable para el usuario.
+      </p>
+      <p class="post-contenido text-justify">
+        Las aplicaciones gráficas en Gambas, de igual forma que Basic, están orientadas a eventos. Un <b>evento</b> es una acción que ocurre en la aplicación, que pueden ser un
+        click, seleccionar un texto, presionar un boton o un elemento de la aplicación y muchos eventos más. El desarrollador entonces debe programar la forma como la
+        aplicación debe reaccionar ante esos eventos.
+      </p>
+    </article>
+
+    <article class="tema clearfix">
+      <h2>El Entorno de Desarrollo</h2>
+      <p class="post-contenido text-justify">
+        Al iniciar Gambas nos pregunta el tipo de aplicación a desarrollar: Aplicación gráfica, Aplicación gráfica QT, Aplicación gŕafica GTK+, Aplicación de consola,
+        Aplicación SDL y Aplicación Web CGI.
+      </p>
+      <img src="img/graficos/proyecto.png" width="" alt="proyecto" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        Hasta ahora en todos los casos hemos seleccionado "<b>Aplicación de consola</b>", ahora seleccionamos "<b>Aplicación gráfica</b>" y nombramos el proyecto.
+      </p>
+      <p class="post-contenido text-justify">
+        Al crear el proyecto gráfico, debe abrirse el ambiente de desarrollo de la aplicación gráfica y los elementos de desarrollo para este tipo de aplicaciones.
+        Observe que en la parte de la izquierda se encuentra el contenido del proyecto gráfico, de doble click sobre el elemento <b>FMain</b> y deberá ver algo similar
+        a esto:
+      </p>
+      <img src="img/graficos/ide.png" width="" alt="IDE" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        La pantalla del editor está dividia en cuatro paneles principales: <b>Panel del Proyecto</b>, <b>Panel de Edición</b>, <b>Panel de Propiedades/Jerarquía</b> y
+        el <b>Panel de Elementos Gráficos</b>. A continuación se describen cada uno de ellos:
+        <ul>
+          <li>En la parte izquierda está el <b>Panel del Proyecto</b>: Por defecto, Gambas crea una estructura de elementos del
+          proyecto, que incluye el elemento <b>FMain</b> que es un formulario principal. En este panel se encuentran todos los elementos que forman parte del proyecto
+          en cuestión. Si se desea añadir algún elemento, formulario o archivo al proyecto, este es el lugar donde debe hacerlo.</li>
+          <li>En la parte central de la ventana se muestra el editor de los formularios. En esta sección se puede modificar el formulario, sus dimensiones y propiedades, así
+            como agregar los elementos gráficos que se mencionarán más adelante.</li>
+          <li>En la parte derecha se encuentran dos paneles, en la parte superior está el panel de propiedades/jerarquía y en la parte inferior se encuentra el panel de
+            elementos gráficos.</li>
+          <ul>
+            <li>El panel de propiedades/jerarquía muestra todas las propiedades que posee el elemento seleccionado en el panel central y la jerarquía de los elementos
+              gráficos existentes en la aplicación gráfica.</li>
+            <li>El panel de elementos gráficos (widgets) muestra todos los elementos que pueden agregarse al formulario, una vez añadido se pueden modificar sus propiedades
+            para controlar su comportamiento en la ejecución de la aplicación gráfica.</li>
+          </ul>
+        </ul>
+      </p>
+      <p class="post-contenido text-justify">
+        Un formulario es un contenedor gráfico de elementos que ejercen acciones en una aplicación gráfica. Al ejecutarse la aplicación, los formularios se visualizan
+        como ventanas. Por defecto, al crear un proyecto gráfico nuevo, Gambas crea también un formulario principal llamado <b>FMain</b>. Para crear un nuevo formulario,
+        basta con pulsar el botón derecho del ratón en la carpeta <b>Fuentes</b> en el <b>Panel del Proyecto</b>, luego elegir <b>Nuevo | Formulario</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        Al ejecutar una aplicación gráfica, el primer formulario que se abre es el marcado como prinicipal, que por defecto es <b>FMain</b>. Se puede observar en el panel
+        del proyecto cual es el formulario principal, está señalado con una pequeña flecha negra. El desarrollador puede decidir cual será el formulario principal, para
+        ello debe buscar el formulario en cuestión en el panel de proyecto, dar click derecho en el y seleccionar "<b>Clase de inicio</b>".
+      </p>
+    </article>
+    <article class="tema clearfix">
+      <h2>Hola Mundo versión gráfica</h2>
+      <p class="post-contenido text-justify">
+        Cuando comenzamos con Gambas hicimos la primera aplicación <b>Hola Mundo</b> en una versión para consola, en esta ocasión realizaremos un equivalente pero en su versión
+        gráfica.
+      </p>
+      <p class="post-contenido text-justify">
+        En primer lugar debemos crear un nuevo proyecto gráfico y ponerle un nombre, por ejemplo <b>holaMundoGrafico</b>.
+      </p>
+      <p class="post-contenido text-justify">
+        Posteriormente debemos agregar al formulario <b>FMain</b> tres elementos: una etiqueta de texto (<b>Label</b>) y dos botones (<b>Button</b>). Para ello seleccione los
+        elementos en el panel de elementos gráficos y arrastrelos hacia el formulario.
+      </p>
+      <p class="post-contenido text-justify">
+        Para cambiar el texto de los elementos gráficos, seleccione el elemento deseado y busque en el panel <b>Propiedades</b> la propiedad <b>Text</b> y escriba en esa caja
+        un nuevo texto. Cambie los textos de los botones para que quede de la siguiente forma:
+      </p>
+      <img src="img/graficos/holaMundoGrafico1.png" width="" alt="Hola Mundo Grafico 1" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        En este momento, la parte gráfica de la aplicación ya está lista, solo falta añadir el código para el comportamiento de los elementos. Para ello, de doble click en el
+        botón <b>Presionar</b>. Observe que se abre el editor de código y se posciona el cursor dentro de la subrutina llamada <b>Button1_Click()</b>. Esta subrutina es la que
+        se ejecuta cuando ocurre el evento <b>Click</b> en el botón 1.
+      </p>
+      <p class="post-contenido text-justify">
+        Añada el siguiente código a la subrutina <code>Button1_Click()</code>:
+        <pre class="gambas">
+      <span class="funcion">Public Sub Button1_Click()</span>
+
+        <span class="elemento">Label1.Text</span> = "<span class="texto">Hola Mundo Cruel</span>"
+        <span class="message">Message.Info</span>("<span class="texto">Hola Mundo Cruel</span>")
+
+      <span class="funcion">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Y añada también el siguiente código al evento click del botón <b>Salir</b>, <code>Button2_Click()</code>
+      <pre class="gambas">
+      <span class="inicio">Public Sub Button2_Click()</span>
+        <span class="funcion">Quit</span>
+      <span class="fin">End</span></pre>
+      </p>
+      <p class="post-contenido text-justify">
+        Al ejecutar la aplicación verá la ventana del formulario principal, y los botones que le agregamos. Al presionar el primer botón, ocurre el evento <code>Click</code> del
+        botón 1 y se ejecuta el código en la subrutina <code>Button1_Click()</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que en esa subrutina se hace referencia al elemento lamado <code>Label1</code> y se
+        modifica el contenido de la propiedad <code>Text</code>, asignando el texto "Hola Mundo Cruel". Por esta razón es que en el fomulario aparecerá este texto al presionar el
+        botón 1.
+      </p>
+      <p class="post-contenido text-justify">
+        Observe que además se llama al Objeto especial <code>Message</code> y su método <code>Info</code> con el argumento "Hola Mundo Cruel". Esta instrucción hace
+        una llamada la sistema operativo solicitando que se despliegue un mensaje informativo con el texto que se pasa como argumento. Este tipo de mensaje tiene por defecto
+        un botón con el texto "OK".
+      </p>
+      <p class="post-contenido text-justify">
+        Al presionar el segundo botón ocurre el evento click y se invoca a la subrutina <code>Button2_Click()</code>. En ella solo se ejecuta la función especial <code>Quit</code>,
+        que como su nombre lo indica, finaliza la aplicación gráfica en ejecución.
+      </p>
+    </article>
+    <article class="tema clearfix">
+      <h2>Ejemplos Gráficos</h2>
+      <ul>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 1.</b> Crear un botón que intercambie dos imágenes
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>2 imágenes distintas.</li>
+              <li>2 Picture Box.</li>
+              <li>1 Botón.</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            En ambos Picture Box es necesario cambiar las propiedades:
+            <ul>
+              <li>Stretch: True</li>
+              <li>Visible: False</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+      <span class="inicio">Public Sub Button1_Click()</span>
+        <span class="if">If</span> <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">True</span> <span class="if">Then</span>
+          <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">False</span>
+          <span class="elemento">PictureBox2.Visible</span> = <span class="tipoDato">True</span>
+        <span class="if">Else</span>
+          <span class="elemento">PictureBox2.Visible</span> = <span class="tipoDato">False</span>
+          <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">True</span>
+        <span class="if">Endif</span>
+      <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 2.</b> Un botón que muestre una imagen y un segundo botón que muestre otra.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>2 Imágenes distintas</li>
+              <li>2 Picture Box</li>
+              <li>2 Botones</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            En ambos Picture Box es necesario cambiar las propiedades:
+            <ul>
+              <li>Stretch: True</li>
+              <li>Visible: False</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public Sub Button1_Click()</span>
+        <span class="if">If</span> <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">True</span> <span class="if">Then</span>
+          <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">False</span>
+        <span class="if">Else</span>
+          <span class="elemento">PictureBox1.Visible</span> = <span class="tipoDato">True</span>
+        <span class="if">Endif</span>
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub Button2_Click()</span>
+        <span class="if">If</span> <span class="elemento">PictureBox2.Visible</span> = <span class="tipoDato">True</span> <span class="if">Then</span>
+          <span class="elemento">PictureBox2.Visible</span> = <span class="tipoDato">False</span>
+        <span class="if">Else</span>
+          <span class="elemento">PictureBox2.Visible</span> = <span class="tipoDato">True</span>
+        <span class="if">Endif</span>
+      <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 3</b>. Mover una imagen en diagonal, posteriormente regresar sobre la misma diagonal.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>Picture Box con imágen</li>
+              <li>1 Botón</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public Sub Button1_Click()</span>
+          <span class="dim">Dim</span> a As <span class="tipoDato">Integer</span>
+
+          <span class="for">For</span> a = 40 <span class="for">To</span> 480 <span class="for">Step</span> 10
+            <span class="elemento">img1.x</span> = a
+            <span class="elemento">img1.y</span> = a
+            <span class="funcion">Wait</span> 0.1
+          <span class="for">Next</span>
+
+          <span class="for">For</span> a = 480 <span class="for">To</span> 40 <span class="for">Step</span> -10
+            <span class="elemento">img1.x</span> = a
+            <span class="elemento">img1.y</span> = a
+            <span class="funcion">Wait</span> 0.1
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 4.</b> Desplegar aleatoriamente 5 imágenes. Detener al click de un botón parar.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>5 imágenes distintas: uno.jpg, dos.jpg, tres.jpg, cuatro.jpg y cinco.jpg</li>
+              <li>1 Picture Box</li>
+              <li>3 Botones: Iniciar, Parar y Salir</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public</span> paro As <span class="tipoDato">Boolean</span>
+        <span class="inicio">Public Sub Button1_Click()</span>
+
+          <span class="dim">Dim</span> arreglo As New <span class="tipoDato">String</span>[5]
+          <span class="dim">Dim</span> y As <span class="tipoDato">Byte</span>
+
+          arreglo[0] = "<span class="texto">uno.jpg</span>"
+          arreglo[1] = "<span class="texto">dos.jpg</span>"
+          arreglo[2] = "<span class="texto">tres.jpg</span>"
+          arreglo[3] = "<span class="texto">cuatro.jpg</span>"
+          arreglo[4] = "<span class="texto">cinco.jpg</span>"
+
+          paro = <span class="tipoDato">False</span>
+
+          <span class="repeat">Repeat</span>
+            y = <span class="funcion">Rnd</span>(0, 5)
+            <span class="elemento">Label1.Text</span> = y
+            <span class="elemento">PictureBox1.Picture</span> = <span class="funcion">Picture</span>[arreglo[y]]
+            <span class="funcion">Wait</span> 0.1
+          <span class="repeat">Until</span> paro = <span class="tipoDato">True</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Button2_Click()</span>
+          paro = <span class="tipoDato">True</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Button3_Click()</span>
+          <span class="funcion">Quit</span>
+        <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 5</b>. Pedir datos a través de una caja de texto y guardarlos en una variable. Desplegar el contenido de la variable.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>1 Text Box</li>
+              <li>1 Text Label</li>
+              <li>1 Label</li>
+              <li>1 Botón</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public Sub Button1_Click()</span>
+          <span class="dim">Dim</span> a As <span class="tipoDato">String</span>
+          <span class="dim">Dim</span> b As <span class="tipoDato">Integer</span>
+
+          a = <span class="funcion">Trim</span>(<span class="elemento">TextBox1.Text</span>)
+          <span class="elemento">TextLabel1.Text</span> = "<span class="texto">Pediste</span> " & a & " <span class="texto">Boletos</span>"
+
+          b = <span class="funcion">CInt</span>(a)
+          <span class="elemento">Label1.Text</span> = "<span class="texto">Total</span> " & (b + 5)
+          <span class="funcion">Wait</span> 5
+          <span class="funcion">Message.Info</span>("<span class="texto">Gracias por su compra</span>")
+        <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 6.</b> Recorre una imagen en un tablero.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>1 Timer</li>
+              <li>1 Picture Box</li>
+              <li>2 Botones: Inicio y Paro</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public</span> coordx As New <span class="tipoDato">Integer</span>[9]
+        <span class="inicio">Public</span> coordy As New <span class="tipoDato">Integer</span>[9]
+        <span class="inicio">Public</span> i As <span class="tipoDato">Byte</span>
+
+        <span class="inicio">Public Sub _new()</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Form_Open()</span>
+          coordx[0] = 32
+          coordy[0] = 48
+          coordx[1] = 120
+          coordy[1] = 48
+          coordx[2] = 192
+          coordy[2] = 48
+          coordx[3] = 32
+          coordy[3] = 152
+          coordx[4] = 120
+          coordy[4] = 152
+          coordx[5] = 192
+          coordy[5] = 152
+          coordx[6] = 32
+          coordy[6] = 256
+          coordx[7] = 120
+          coordy[7] = 256
+          coordx[8] = 192
+          coordy[8] = 256
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Timer1_Timer()</span>
+          <span class="elemento">PictureBox1.x</span> = coordx[i]
+          <span class="elemento">PictureBox1.y</span> = coordy[i]
+          <span class="funcion">Inc</span> i
+          <span class="if">If</span> i > 8 <span class="if">Then</span>
+            i = 0
+          <span class="if">Endif</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Button1_Click()</span>
+          <span class="elemento">Timer1.Enabled</span> = <span class="tipoDato">True</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub Button2_Click()</span>
+          <span class="elemento">Timer1.Enabled</span> = <span class="tipoDato">False</span>
+        <span class="fin">End</span></pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 7</b>. Tablero mediante un arreglo de Objetos.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>1 Imágen</li>
+              <li>9 Picture Box</li>
+              <li>2 Botones: Inicio y Paro</li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código:
+      <pre class="gambas">
+        <span class="inicio">Public</span> paro As <span class="tipoDato">Boolean</span>
+        <span class="inicio">Public</span> objeto As New <span class="tipoDato">Object</span>[9]
+
+        <span class="inicio">Public Sub Form_Open()</span>
+          paro = <span class="tipoDato">False</span>
+
+          objeto[0] = <span class="elemento">PictureBox1</span>
+          objeto[1] = <span class="elemento">PictureBox2</span>
+          objeto[2] = <span class="elemento">PictureBox3</span>
+          objeto[3] = <span class="elemento">PictureBox4</span>
+          objeto[4] = <span class="elemento">PictureBox5</span>
+          objeto[5] = <span class="elemento">PictureBox6</span>
+          objeto[6] = <span class="elemento">PictureBox7</span>
+          objeto[7] = <span class="elemento">PictureBox8</span>
+          objeto[8] = <span class="elemento">PictureBox9</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub inicio_Click()</span>
+          <span class="dim">Dim</span> i As <span class="tipoDato">Integer</span>
+          <span class="dim">Dim</span> pic As New <span class="tipoDato">Picture</span>
+
+          <span class="repeat">Repeat</span>
+            <span class="print">Print</span> i
+            <span class="if">If</span> i = 0 <span class="if">Then</span>
+              <span class="elemento">objeto[i].visible</span> = <span class="tipoDato">True</span>
+              <span class="elemento">objeto[8].visible</span> = <span class="tipoDato">False</span>
+            <span class="if">Else</span>
+              <span class="elemento">objeto[i].visible</span> = <span class="tipoDato">True</span>
+              <span class="elemento">objeto[i - 1].visible</span> = <span class="tipoDato">False</span>
+            <span class="if">Endif</span>
+            <span class="funcion">Wait</span> 0.2
+            <span class="elemento">objeto[i].Picture</span> = <span class="funcion">Picture</span>["<span class="texto">uno.jpg</span>"]
+            <span class="funcion">Inc</span> i
+            <span class="if">If</span> i = 9 <span class="if">Then</span>
+              i = 0
+            <span class="if">Endif</span>
+          <span class="repeat">Until</span> paro = <span class="tipoDato">True</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub parar_Click()</span>
+          paro = <span class="tipoDato">True</span>
+        <span class="fin">End</span>
+      </pre>
+          </p>
+        </li>
+        <li>
+          <p class="post-contenido text-justify">
+            <b>Ejemplo 8.</b> Selecciona una imagen en un formulario, se visualiza en otro.
+          </p>
+          <p class="post-contenido text-justify">
+            Crear:
+            <ul>
+              <li>2 formularios: Form1 y Form2 (formulario de inicio)</li>
+              <li>Form1:
+                <ul>
+                  <li>3 imágenes</li>
+                  <li>3 Picture Box (cargar cada una de las imágenes)</li>
+                  <li>Poner un Label con texto informativo</li>
+                </ul>
+              </li>
+              <li>
+                Form2:
+                <ul>
+                  <li>1 Picture Box (cambiar el nombre a: <b>seleccion</b>)</li>
+                  <li>1 Botón</li>
+                  <li>Poner un label con texto informativo</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <p class="post-contenido text-justify">
+            Código <b>Form1</b>:
+      <pre class="gambas">
+        <span class="inicio">Public Sub Form_Open()</span>
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub PictureBox1_MouseDown()</span>
+          <span class="elemento">Me.Close</span>(1)
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub PictureBox2_MouseDown()</span>
+          <span class="elemento">Me.Close</span>(2)
+        <span class="fin">End</span>
+
+        <span class="inicio">Public Sub PictureBox3_MouseDown()</span>
+          <span class="elemento">Me.Close</span>(3)
+        <span class="fin">End</span></pre>
+          </p>
+          <p class="post-contenido text-justify">
+            Código <b>Form2</b>:
+      <pre class="gambas">
+        <span class="inicio">Public Sub Button1_Click()</span>
+
+          <span class="select">Select</span> <span class="elemento">Form1.ShowDialog()</span>
+            <span class="select">Case</span> 1
+              <span class="elemento">seleccion.Picture</span> = <span class="funcion">Picture</span>["<span class="texto">uno.jpg</span>"]
+            <span class="select">Case</span> 2
+              <span class="elemento">seleccion.Picture</span> = <span class="funcion">Picture</span>["<span class="texto">dos.jpg</span>"]
+            <span class="select">Case</span> 3
+              <span class="elemento">seleccion.Picture</span> = <span class="funcion">Picture</span>["<span class="texto">tres.jpg</span>"]
+          <span class="select">End Select</span>
+        <span class="fin">End</span>
+      </pre>
+          </p>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

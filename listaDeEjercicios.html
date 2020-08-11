@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Lista de Ejercicios</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <li><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li class="active"><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+    <article class="tema clearfix">
+      <h2>Ejercicios</h2>
+      <p class="post-contenido text-justify">
+        <ol>
+          <hr>
+          <!-- Básicos -->
+          <h3>Básicos</h3>
+          <li>Realice un algoritmo que convierta su edad en segundos. El algoritmo debe recibir como
+            datos de entrada los años, meses y días de su edad y calcular la cantidad de segundos que usted haya vivido.
+          </li>
+          <li>Realice un algoritmo que calcule la distancia entre dos puntos, tomando como datos de
+            entrada las coordenadas de los puntos P1 y P2.
+          </li>
+          <li>Realizar un algoritmo que resuelve una ecuación de segundo grado mediante la fórmula general.
+          </li>
+          <li>Construya un algoritmo tal que reciba como datos la base y altura de un rectángulo, luego calcule el
+          perímetro y la superficie del mismo.</li>
+          <hr>
+
+          <!-- Condicionales -->
+          <h3>Condicionales</h3>
+          <li>Realice un algoritmo que determine si un número es mayor o menor a 10.</li>
+          <li>Realizar un algoritmo que solicite un número y determine si es positivo o negativo.</li>
+          <li>Realizar un algoritmo para determinar si un número es par o impar.</li>
+          <li>Haga un algoritmo para decidir si un número es divisible por 3 o no.</li>
+          <li>Realizar un algoritmo que simule el juego: Piedra - Papel - Tijera.</li>
+          <li>Escriba un algoritmo que determine si un año es bisiesto o no.</li>
+          <li>Desarrolle un algoritmo para simular un volado. El usuario debe elegir cara o cruz y aleatoriamente
+            se selecciona alguno de las dos posibilidades.
+          </li>
+          <li>Realizar un algoritmo que resuelve una ecuación de segundo grado mediante la fórmula general, haga la versión
+            aumentada en la que sirve para determinar raíces reales e imaginarias.
+          </li>
+          <li>Hacer un algoritmo que reciba la fecha de nacimiento y determine su signo del Zodiaco.
+          </li>
+          <li>Hacer un algoritmo que solicite la edad de una persona y determine su categoría e acuerdo:
+            <ul>
+              <li>Si la edad es mayor o igual a 0 y menor que 2 entonces es bebé</li>
+              <li>Si la edad es mayor o igual a 2 y menor que 11 entonces es niño</li>
+              <li>Si la edad es mayor o igual a 11 y menor que 18 entonces es adolescente</li>
+              <li>Si la edad es mayor o igual a 18 y menor que 30 entonces es adulto joven</li>
+              <li>Si la edad es mayor o igual a 30 y menor que 65 entonces es adulto</li>
+              <li>Si la edad es mayor o igual a 65 entonces es de la tercera edad</li>
+            </ul>
+            El algoritmo debe indicar al usuario un error si la edad no se encuentra en alguno de los intervalos.
+          </li>
+          <li>Realizar un algoritmo que solicite una calificación numérica del 0 al 10 y la convierta a la escala:
+            <ul>
+              <li>[0, 6) => No Acreditado</li>
+              <li>[6, 7.5) => Suficiente</li>
+              <li>[7.5, 9) = > Bien</li>
+              <li>[9, 10) => Muy Bien</li>
+              <li> 10 => Líder de Acción Positiva</li>
+            </ul>
+            El algoritmo debe indicar al usuario un error si la calificación no se encuentra en alguno de los intervalos.
+          </li>
+          <li>Realice un algoritmo que calcule los impuestos que debe pagar un empleado. El algoritmo recibe como dato el
+            salario del empleado, debe verificar que sea válido (positivo), y calcular los impuestos que debe pagar de
+            acuerdo a la siguiente tabla.
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="info">
+                    <th>
+                      <p class="textoTabla">Rango del Salario</p>
+                    </th>
+                    <th>
+                      <p class="textoTabla">Porcentaje de Impuesto</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="textoTabla"> hasta antes de $10,000 </p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">8%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">desde $10,000 hasta antes de $35,000</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">12%</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">desde $35,000</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">20%</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            El algoritmo debe imprimir el salario intacto, los impuestos retenidos y el salario menos los impuestos.
+          </li>
+          <li>El costo de las llamadas telefónicas internacionales depende de la zona geográfica en la que se encuentre el país destino
+            y del número de minutos hablados. En la siguiente tabla se presenta el costo del minuto por la zona. A cada zona se le ha
+            asociado una clave.
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="info">
+                    <th>
+                      <p class="textoTabla">Clave</p>
+                    </th>
+                    <th>
+                      <p class="textoTabla">Zona</p>
+                    </th>
+                    <th>
+                      <p class="textoTabla">Precio</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">12</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">América del Norte</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">2</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">15</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">América Central</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">2.2</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">18</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">América del Sur</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">4.5</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">19</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">Europa</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">3.5</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">23</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">Asia</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">6</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">25</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">África</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">6</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">29</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">Oceanía</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">5</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            Construya un diagrama de flujo que permita calcular el costo de una llamada. El algoritmo debe recibir como datos la duración de la
+            llamada en minutos y la clave de la zona a donde realizó la llamada. Imprima el costo de la llamada, si el usuario ingresa una clave
+            incorrecta imprima un mensaje de error.
+          </li>
+          <hr>
+
+          <!-- Ciclos -->
+          <h3>Ciclos</h3>
+          <li>Realizar un algoritmo que suma los primeros 100 números enteros.</li>
+          <li>Realizar un algoritmo que imprime los primeros 100 números pares.</li>
+          <li>Realizar un algoritmo que imprime los primeros 100 números impares.</li>
+          <li>
+            <p class="text-justify">
+              Realice un algoritmo que calcule el promedio de las calificaciones de un alumno. El alumno deberá ingresar
+              el número de materias que cursa y las calificaciones en cada una de ellas. El algoritmo debe calular e imprimir
+              el promedio y determinar si tiene derecho a beca o no.
+            </p>
+          </li>
+          <li>Realice un algoritmo que lea un número entero <code>N</code> y calcule la siguiente serie:
+            <img src="img/ejercicios/serie1.png" alt="" class="imgcenter img-rounded img-responsive"></li>
+          <li>Realice un algoritmo que solicite un número <code>n</code>, verifique que sea positivo y calcule la suma:
+            <p class="text-center">
+              <code>1 + 1/2 + 1/3 + ... + 1/n</code>
+            </p></li>
+          <li>Realice un algoritmo que solicite un número <code>n</code>, verifique que sea positivo y calcule la suma:
+            <p class="text-center">
+              <code>1 + 3 + 5 + 7 + 9 + ... + (2n+1)</code>
+            </p></li>
+          <li>Escriba un diagrama de flujo que lea un número <code>N</code> y calcule el resultado de la serie:
+            <p class="text-center"><code>1 - 1/2 + 1/3 - 1/4 + ... &#177 N</code></p></li>
+          <li>Haga un algoritmo que solicite un número positivo <code>n</code>, verifique que sea positivo y calcule el producto:
+            <p class="text-center">
+              <code>1*3*5*7*9*...*n</code>
+          </p></li>
+          <li>Realizar un algoritmo que calcule la potencia de un número <code>x</code> elevado a un número entero <code>n</code> mediante multiplicaciones sucesivas.</li>
+          <li>
+            <p class="text-justify">Realizar un algoritmo que solcite dos números enteros y calcule el producto de dichos números mediante sumas sucesivas.</p>
+          </li>
+          <li>Realizar un algoritmo que calcule la raíz cuadrada de un número <code>x</code> entero mediante el
+              <a href="https://es.wikipedia.org/wiki/C%C3%A1lculo_de_la_ra%C3%ADz_cuadrada">algoritmo babilónico</a>.</li>
+          <li>Realizar un algoritmo que calcule la división de dos números mediante restas sucesivas.</li>
+          <li>
+            <p class="text-justify">Realizar un algoritmo que solicite un número entero positivo, verifique que lo sea y posteriormente determine los números
+            que son divisibles desde 1 hasta ese número.</p>
+          </li>
+          <li>Realice un algoritmo que solicite un número entero, verifique que sea positivo y determine si el número es primo.</li>
+          <li>Realice un algoritmo que solicite un número entero al usuario y muestre en pantalla todos los años bisiestos que hay desde 0 hasta el número que
+            ingresó el usuario.</li>
+          <li>Realice un algoritmo que genere <code>N</code> números aleatorios, y determine si cada número generado es par o impar.</li>
+          <li><p class="text-justify">Realizar un algoritmo que calcule el factorial de un número entero <code>n</code>. Considere que si <code>n</code> es positivo el factorial es
+               <code>1*2*3*4*...*n</code>, si <code>n</code> es cero por definición el factorial es 1 y si <code>n</code> es negativo el factorial no está definido.
+               El algoritmo debe determinar el caso que corresponda y realizarlo, si fuera negativo mande un mensaje de error al usuario.</p>
+          </li>
+          <li>Realizar un algoritmo que solicite un número <code>n</code> y calcule la serie de
+            <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a>.</li>
+          <li>Realizar un algoritmo que calcule una aproximación al número <code>&#960</code>.</li>
+            <p><img src="img/ejercicios/pi1.png" alt="Numero Pi" class="imgcenter"></p>
+          <li>Realizar un algoritmo que calcule una aproximación al número de <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_e">Euler</a>.</li>
+          <li>Realizar un algoritmo que resuelve una integral definida mediante la definición por sumas de Riemann.</li>
+          <li>La conjetura de ULAM toma su nombre en honor al matemático S. Ulam.
+            Dicha conjetura dice lo siguiente:
+            <ol type="a">
+              <li>Comience con un número entero positivo cualquiera</li>
+              <li>Si es par divídalo entre 2, si es impar multiplíquelo por 3 y agréguele 1</li>
+              <li>Obtenga enteros sucesivamente repitiendo el proceso</li>
+              <li>Al final, obtendrá el número 1 independientemente del entero inicial.</li>
+            </ol>
+          Escriba un algoritmo que solicite un número entero, verifique que es positivo, obtenga e imprima la sucesión de ULAM.
+          </li>
+          <li>Supóngase que en una reciente elección hubo cuatro candidatos (con identificadores 1, 2, 3 y 4). Usted habrá de encontrar, mediante un algoritmo,
+            el número de votos correspondientes a cada candidato y el porcentaje que obtuvo respecto al total de votantes. El usuario teclea los votos de manera
+            desorganizada, tal y como se obtuvieron en la elección. Para indicar que el usuario ha terminado de ingresar votos teclea un cero. Observe, como
+            ejemplo la siguiente lista:
+              <p class="text-center">1  3  4  1  2  4  3  2  2  1  1  3  4  2  2  0</p>
+            Donde 1 representa un voto para el candidato 1, 2 representa un voto para el candidato 2 y así sucesivamente. Construya un algoritmo que haga el
+            conteo de los votos totales y por candidato, además calcule el porcentaje de los votos obtenidos por cada candidato. </li>
+          <li>Construya un algoritmo que dado <code>N</code> números enteros como dato, calcule el mayor y el menor de estos números. Considere que el usuario ingresará la
+            cantidad de números y posteriormente los números.</li>
+          <li>Haga una variante del programa anterior pero en esta ocasión sólo se aceptarán números positivos, la cantidad de números es indefinida y se indicará
+            el final del ingreso de números con un "-1".</li>
+          <li>Desarrolle un algoritmo que consiste en adivinar el número mágico. El algoritmo debe generar aleatoriamente un número entre 1 y 100,
+            el usuario debe adivinarlo. El usuario debe ingresar un número y el algoritmo le dirá si el número que ingresó es mayor o menor que el mágico.
+            Si el usuario adivina, el algoritmo debe terminar e indicar el número de intentos que le tomó al usuario. El usuario tiene un número ilimitado
+            de intentos para adivinar.</li>
+          <li>Un vendedor ha hecho una serie de ventas y desea conocer aquellas de $200 o menos, las mayores de $200 pero inferiores a $400, y el número de ventas
+            de $400 o superiores. Haga un algoritmo que le proporcione al vendedor esta información después de haber leído los datos de entrada.
+            El número de ventas es indefinido y el usuario indicará que habrá terminado de ingresar datos introduciendo "-1".</li>
+          <li>Haga un algoritmo para calcular lo que hay que pagar por una llamada telefónica. Se ingresa el tipo de llamada (Internacional, Nacional o Local)
+            y la duración en minutos. El criterio que se sigue para calcular el costo de la llamada es el siguiente:
+
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td><p class="text-center">Internacional</p></td>
+                    <td><p class="text-center">3 primeros minutos $7.59</p>
+                    <p class="text-center">Cada minuto adicional $3.03</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="text-center">Nacional</p></td>
+                    <td><p class="text-center">3 primeros minutos $1.20</p>
+                    <p class="text-center">Cada minuto adicional $0.48</p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="text-center">Local</p></td>
+                    <td><p class="text-center">$0.60 por minuto.</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-justify">El usuario habrá de ingresar tipo y duración de la llamada, el programa recibirá una cantidad indefinida de datos de llamadas
+              hasta que reciba “-1” como tipo y duración.</p></li>
+            <li>Realizar un algoritmo que determina e imprime los números  primos que hay de 1 al 100.</li>
+            <li>Dados los números naturales ordenados, realice un algoritmo que sume estos números mientras el resultados sea
+              menor que 1000 y que diga cuántos números naturales son necesarios para conseguirlo.</li>
+
+          <!-- Ciclos anidados -->
+          <hr>
+          <h3>Ciclos Anidados</h3>
+          <li>
+            <p class="text-justify">
+              Realizar un algoritmo que solicite un número entero positivo y calcule el factorial de todos los números enteros que hay
+              entre <code>1</code> y ese número. Verifique si el número que ingreso el usuario es positivo. Imprima en cada caso una tabla con los resultados.
+              Por ejemplo, si el usuario ingresa <code>5</code> el programa debería imprimir:
+            </p>
+              <table class="table">
+                <thead>
+                  <th>x</th>
+                  <th>x!</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>120</td>
+                  </tr>
+                </tbody>
+              </table>
+          </li>
+          <li><p class="text-justify">Realice una variante del algoritmo anterior, pero ahora determine si cada número es primo o no. Por ejemplo, si el usuario
+              ingresa <code>6</code> el programa debería imprimir:</p>
+            <table class="table">
+              <thead>
+                <th>x</th>
+                <th>¿Primo?</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Si</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Si</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Si</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Si</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </li>
+          <li>Realizar un algoritmo que solicite un número entero positivo y calcule la raíz cuadrada (mediante el
+            algoritmo babilónico) de todos los números enteros que hay entre 0 y ese número.</li>
+          <li>Realizar un algoritmo y programa en Gambas que solicite dos números enteros positivos, base y altura respectivamente, y dibuje un
+            rectángulo lleno de asteriscos.</li>
+          <li>Realizar un programa que solicite dos números enteros positivos <code>M</code> y <code>N</code>, y despliegue en pantalla
+            algo similar a esto:
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">1</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">2</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">3</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">5</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">2</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">6</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">8</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">10</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">3</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">6</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">9</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">12</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">15</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">8</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">12</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">16</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">20</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-justify">
+                Para este ejemplo <code>M=4</code> y <code>N=5</code>.
+              </p>
+            </div>
+          </li>
+          <li>Realizar un programa que solicite dos números enteros positivos <code>M</code> y <code>N</code>, y despliegue en pantalla
+            algo similar a esto:
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">1</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">2</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">3</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">5</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">2</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">9</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">16</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">25</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">3</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">8</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">27</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">64</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">125</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="textoTabla">4</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">16</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">81</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">256</p>
+                    </td>
+                    <td>
+                      <p class="textoTabla">625</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-justify">
+                Para este ejemplo <code>M=4</code> y <code>N=5</code>.
+              </p>
+            </div>
+          </li>
+          <li><p class="text-justify">En una Universidad se desea saber el promedio de los alumnos inscritos. Desarrolle un programa que
+              solicite el número de estudiantes y el número de materias (todos cursan las mismas materias) y calcule el promedio para
+              cada alumno. Utilice ciclos anidados.</p></li>
+          <li><p class="text-justify">Escriba un algoritmo y desarrolle un programa que solicite dos números enteros positivos <code>M</code>
+            y <code>N</code> que forman una matriz <code>MxN</code>. Llene todos los elementos de esa matriz con valores aleatorios entre 0 y 100.
+            Imprima en pantalla la matriz resultante.</p></li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite un número <code>N</code>, verifique que sea positivo e imprima:
+            </p>
+            <code>
+              1 <br>
+              22 <br>
+              333 <br>
+              4444 <br>
+              55555 <br>
+              ... <br>
+              N veces N
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite un número <code>N</code>, verifique que sea positivo e imprima:
+            </p>
+            <code>
+              N veces N <br>
+              ... <br>
+              55555 <br>
+              4444 <br>
+              333 <br>
+              22 <br>
+              1
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite un número <code>N</code>, verifique que sea positivo e imprima:
+            </p>
+            <code>
+              1<br>
+              1 2<br>
+              1 2 3<br>
+              1 2 3 4<br>
+              1 2 3<br>
+              1 2<br>
+              1
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite un número <code>N</code> para formar una matriz <code>NxN</code>. Verifique que el
+              número sea positivo e imprima una matriz cuya diagonal tenga <code>0</code> y el resto <code>1</code>. Por ejemplo:
+              si <code>N=5</code> se debería imprimir lo siguiente
+            </p>
+            <code>
+              0 1 1 1 1 <br>
+              1 0 1 1 1 <br>
+              1 1 0 1 1 <br>
+              1 1 1 0 1 <br>
+              1 1 1 1 0
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite un número <code>N</code> para formar una matriz <code>NxN</code>. Verifique que el
+              número sea positivo e imprima una matriz cuya diagonal tenga <code>0</code>, los números superiores a la diagonal deben
+              ser <code>1</code> y los inferiores <code>2</code>. Por ejemplo: si <code>N=5</code> se debería imprimir lo siguiente
+            </p>
+            <code>
+              0 1 1 1 1 <br>
+              2 0 1 1 1 <br>
+              2 2 0 1 1 <br>
+              2 2 2 0 1 <br>
+              2 2 2 2 0
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un algoritmo que solicite dos números <code>M</code> y <code>N</code> para formar una matriz <code>MxN</code>.
+              Verifique que los números sean positivos e imprima una matriz llena de números consecutivos. Por ejemplo: si <code>M=4</code>
+              y <code>N=6</code> se debería imprimir lo siguiente
+            </p>
+            <code>
+              1 2 3 4 5 6<br>
+              7 8 9 0 1 2<br>
+              3 4 5 6 7 8<br>
+              9 0 1 2 3 4
+            </code>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escribir un programa en Gambas que solicite dos números enteros positivos <code>x</code> y <code>n</code> y obtenga el resultado
+              de la operación <code>x^n</code>. La operación deberá realizarse con ciclos anidados <b>empleando únicamente sumas</b>.
+            </p>
+          </li>
+          <li><p class="text-justify">En una Universidad se desea saber el promedio de los alumnos inscritos. Desarrolle un programa que
+              solicite el número de estudiantes y el número de materias (todos cursan las mismas materias) y calcule el promedio para
+              cada alumno. Si un alumno tiene promedio mínimo de 8, tendrá derecho a beca. Determine cuantos alumnos tienen derecho a beca
+              y cuantos no tienen derecho a beca. Utilice ciclos anidados.</p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Desarrolle un programa que solicite un número entero y genere las "tablas de multiplicar" hasta el número que haya ingresado el usuario.
+              Utilice ciclos anidados. Por ejemplo, si el usuario ingresa <code>2</code>, el programa debería imprimir algo similar a esto:
+            </p>
+            <table class="table">
+              <tbody>
+                <tr><td>1x1=1</td></tr>
+                <tr><td>1x2=2</td></tr>
+                <tr><td>1x3=3</td></tr>
+                <tr><td>1x4=4</td></tr>
+                <tr><td>1x5=5</td></tr>
+                <tr><td>1x6=6</td></tr>
+                <tr><td>1x7=7</td></tr>
+                <tr><td>1x8=5</td></tr>
+                <tr><td>1x9=5</td></tr>
+                <tr><td>1x10=10</td></tr>
+                <tr></tr>
+                <tr><td>2x1=2</td></tr>
+                <tr><td>2x2=4</td></tr>
+                <tr><td>2x3=6</td></tr>
+                <tr><td>2x4=8</td></tr>
+                <tr><td>2x5=10</td></tr>
+                <tr><td>2x6=12</td></tr>
+                <tr><td>2x7=14</td></tr>
+                <tr><td>2x8=16</td></tr>
+                <tr><td>2x9=18</td></tr>
+                <tr><td>2x10=20</td></tr>
+              </tbody>
+            </table>
+          </li>
+
+          <!-- Arreglos Unidimensionales -->
+          <hr>
+          <h3>Arreglos Unidimensionales</h3>
+          <li>
+            <p class="text-justify">
+              Realice un programa que guarde 12 calificaciones en un arreglo y calcule el promedio de las calificaciones. El
+              programa debe recibir las calificaciones y verificar que sean válidas, es decir que estén entre 0 y 10.
+            </p>
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Float</span>[12]
+          <span class="dim">Dim</span> i As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> suma As <span class="tipoDato">Float</span>
+
+          suma = 0
+
+          <span class="print">Print</span> "<span class="texto">Introduza las calificaciones</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> 11
+            <span class="print">Print</span> "<span class="texto">Alumno </span>"; i + 1; "<span class="texto"> = </span>";
+            <span class="input">Input</span> calificaciones[i]
+
+            <span class="if">If</span> calificaciones[i] < 0
+              <span class="print">Print</span> "<span class="texto">Calificacion no valida</span>"
+              calificaciones[i] = 0
+            <span class="if">Else If</span> calificaciones[i] > 10
+              <span class="print">Print</span> "<span class="texto">Calificacion no valida</span>"
+              calificaciones[i] = 0
+            <span class="if">Else</span>
+              <span class="print">Print</span> "<span class="texto">Calificacion valida</span>"
+              suma = suma + calificaciones[i]
+            <span class="if">Endif</span>
+          <span class="for">Next</span>
+
+          <span class="print">Print</span> "<span class="texto">El promedio es = </span>"; suma / 12
+        <span class="fin">End</span></pre>
+          </li>
+          <li><p class="text-justify">Haga una variante del programa anterior pero que ahora determine la calificación mayor y
+            la menor del arreglo.</p>
+      <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Float</span>[12]
+          <span class="dim">Dim</span> i As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> mayor, menor As <span class="tipoDato">Float</span>
+
+          <span class="print">Print</span> "<span class="texto">Ingrese las calificaciones</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> 11
+            <span class="print">Print</span> "<span class="texto">Alumno </span>"; i + 1; "<span class="texto"> = </span>";
+            <span class="input">Input</span> calificaciones[i]
+          <span class="for">Next</span>
+
+          <span class="comentario">' Suponiendo que la 1a calificacion es la menor y mayor</span>
+          mayor = calificaciones[0]
+          menor = calificaciones[0]
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> 11
+            <span class="if">If</span> calificaciones[i] > mayor
+              mayor = calificaciones[i]
+            <span class="if">Endif</span>
+            <span class="if">If</span> calificaciones[i] < menor
+              menor = calificaciones[i]
+            <span class="if">Endif</span>
+          <span class="for">Next</span>
+
+          <span class="print">Print</span> "<span class="texto">La calificacion mayor es = </span>"; mayor
+          <span class="print">Print</span> "<span class="texto">La calificacion menor es = </span>"; menor
+        <span class="fin">End</span></pre>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga un programa que haga una lista de calificaciones de cierto grupo. El programa debe solicitar nombre y calificación de cada
+              alumno y guardar estos datos en un arreglo. Al final se debe imprimir el contenido del arreglo.
+      <pre class="gambas">
+        <span class="comentario">' Declaracion de una constante N</span>
+        <span class="inicio">Public</span> <span class="dim">Const</span> N As <span class="tipoDato">Byte</span> = 5
+
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Float</span>[N]
+          <span class="dim">Dim</span> nombres As <span class="dim">New</span> <span class="tipoDato">String</span>[N]
+          <span class="dim">Dim</span> i As <span class="tipoDato">Byte</span>
+
+          ' Introduccion de datos
+          <span class="for">For</span> i = 0 <span class="for">To</span> N - 1
+            <span class="print">Print</span> "<span class="texto">Nombre Alumno </span>"; i + 1; "<span class="texto">: </span>";
+            Input nombres[i]
+            <span class="print">Print</span> "<span class="texto">Calificacion: </span>";
+            Input calificaciones[i]
+          <span class="for">Next</span>
+
+          Print "<span class="texto">Lista de calificaciones</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> N - 1
+            <span class="print">Print</span> i + 1, nombres[i], calificaciones[i]
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              En un arreglo unidimensional se ha almacenado el número total de toneladas de cereales cosechadas durante cada mes del año anterior.
+              Construya un diagrama de flujo que proporcione la siguiente información:
+              <ol type="a">
+                <li>El promedio anual de toneladas cosechadas</li>
+                <li>¿Cuántos meses tuvieron una cosecha superior al promedio anual?</li>
+                <li>¿Cuántos meses tuvieron una cosecha inferior al promedio anual?</li>
+                <li>¿Cuál fue el mes en el que se produjeron mayor número de toneladas?</li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga un programa que solicite el contenido de dos vectores unidimensionales y realice la suma de ellos. Solicite al usuario
+              las dimensiones de los vectores y los elementos de cada uno de ellos. Considere que los dos vectores tienen las mismas dimensiones.
+      <pre class="gambas">
+        <span class="comentario">' Declaracion de una constante N</span>
+        <span class="inicio">Public</span> <span class="dim">Const</span> N As <span class="tipoDato">Byte</span> = 50
+
+        <span class="inicio">Public Sub Main()</span>
+          <span class="comentario">' Se declaran los arreglos de tamaño N</span>
+          <span class="dim">Dim</span> a, b, c As <span class="dim">New</span> <span class="tipoDato">Integer</span>[N]
+          <span class="dim">Dim</span> i, tamano As <span class="tipoDato">Byte</span>
+
+          <span class="print">Print</span> "<span class="texto">Introduzca las dimesiones de sus vectores</span>"
+          <span class="input">Input</span> tamano
+
+          <span class="comentario">' Si el tamaño que introdujo el usuario es mayor que el
+          ' tamaño declarado de los arreglos, se marca un error</span>
+          <span class="if">If</span> tamano > N <span class="if">Then</span>
+            <span class="print">Print</span> "<span class="texto">Demasiado grande</span>"
+          <span class="if">Else</span>
+            <span class="comentario">' Introduccion de datos</span>
+            <span class="for">For</span> i = 0 <span class="for">To</span> tamano - 1
+              <span class="print">Print</span> "<span class="texto">a[</span>"; i + 1; "<span class="texto">] = </span>";
+              <span class="input">Input</span> a[i]
+              <span class="print">Print</span> "<span class="texto">b[</span>"; i + 1; "<span class="texto">] = </span>";
+              <span class="input">Input</span> b[i]
+            <span class="for">Next</span>
+
+            <span class="comentario">' Suma e impresion de los vectores</span>
+            <span class="print">Print</span> "<span class="texto">La suma de los vectores es: </span>"
+            <span class="for">For</span> i = 0 <span class="for">To</span> tamano - 1
+              c[i] = a[i] + b[i]
+              <span class="print">Print</span> "<span class="texto">c[</span>"; i + 1; "<span class="texto">] = </span>"; c[i]
+            <span class="for">Next</span>
+          <span class="if">Endif</span>
+        <span class="fin">End</span></pre>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escriba un programa que reciba como entrada un arreglo unidimensional de enteros ordenados (posiblemente repetidos) y genere como
+              salida una lista de los números enteros.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escriba un programa que reciba como entrada un arreglo unidimensional de enteros ordenados (posiblemente repetidos) y genere como
+              salida una lista de los números enteros, pero sin repeticiones.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              En un arreglo unidimensional se almacenan las calificaciones de <code>N</code> alumnos. Construya un programa que permita ingresar
+              calificaciones de los <code>N</code> alumnos, calcular e imprimir lo siguiente:
+              <ol type="a">
+                <li>El promedio general del grupo</li>
+                <li>Número de alumnos aprobados y reprobados.</li>
+                <li>Porcentaje de alumnos aprobados y reprobados.</li>
+                <li>Número de alumnos cuya calificación fue mayor a 8.</li>
+              </ol>
+              Considere que el programa debe solicitar inicialmente el valor de <code>N</code> y debe impedirse que su valor sea mayor que 100.
+              <pre class="gambas">
+        <span class="comentario">' Declaracion de una constante N</span>
+        <span class="inicio">Public</span> <span class="dim">Const</span> N As <span class="tipoDato">Byte</span> = 10
+
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> calificaciones As <span class="dim">New</span> <span class="tipoDato">Float</span>[N]
+          <span class="dim">Dim</span> nombres As <span class="dim">New</span> <span class="tipoDato">String</span>[N]
+          <span class="dim">Dim</span> i, nA, nR, beca As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> suma As <span class="tipoDato">Float</span>
+
+          suma = 0
+          nA = 0
+          nR = 0
+          beca = 0
+
+          <span class="comentario">' Introducción de los datos de la lista de alumnos</span>
+          <span class="print">Print</span> "<span class="texto">Introduzca las calificaciones</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> N - 1
+            <span class="print">Print</span> "<span class="texto">Nombre Alumno </span>"; i + 1; "<span class="texto">: </span>";
+            <span class="input">Input</span> nombres[i]
+            <span class="print">Print</span> "<span class="texto">Calificacion de </span>"; nombres[i]; "<span class="texto">: </span>";
+            <span class="input">Input</span> calificaciones[i]
+          <span class="for">Next</span>
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> N - 1
+            suma = suma + calificaciones[i]
+            <span class="if">If</span> calificaciones[i] >= 6 <span class="if">Then</span>
+              <span class="comentario">' Aprobados</span>
+              nA = nA + 1
+              <span class="if">If</span> calificaciones[i] >= 8 <span class="if">Then</span>
+                <span class="comentario">' Los que conservan beca</span>
+                beca = beca + 1
+              <span class="if">Endif</span>
+            <span class="if">Else</span>
+              <span class="comentario">' Reprobados</span>
+              nR = nR + 1
+            <span class="if">Endif</span>
+          <span class="for">Next</span>
+
+          <span class="print">Print</span> "<span class="texto">El promedio del grupo es: </span>"; suma / N
+          <span class="print">Print</span> "<span class="texto">Numero de aprobados: </span>"; nA
+          <span class="print">Print</span> "<span class="texto">Numero de reprobados: </span>"; nR
+          <span class="print">Print</span> "<span class="texto">Porcentaje de Aprobación: </span>"; nA / N * 100; "<span class="texto">%</span>"
+          <span class="print">Print</span> "<span class="texto">Porcentaje de Reprobación: </span>"; nR / N * 100; "<span class="texto">%</span>"
+          <span class="print">Print</span> "<span class="texto">Alumnos de que conservan la beca: </span>"; beca
+        <span class="fin">End</span></pre></p>
+          </li>
+          <li>
+            <p class="text-justify">
+              En dos arreglos unidimensionales se almacenan los nombres y calificaciones de <code>N</code> alumnos respectivamente. Construya un
+              programa que permita ingresar los nombres y calificaciones de los <code>N</code> alumnos, y calcular:
+              <ol type="a">
+                <li>Desviación estándar</li>
+                <li>Varianza</li>
+                <li>Nombre del alumno con calificación mayor</li>
+                <li>Nombre del alumno con calificación menor</li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Se dice que un número entero positivo <code>N</code> es un número primo si los únicos enteros positivos que lo dividen son exactamente
+              1 y <code>N</code>. Utilice un arreglo para almacenar los primeros 30 números primos e imprimirlos en pantalla.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Realizar un programa que solicite 10 temperaturas. Almacenar las temperaturas en un arreglo e imprima en pantalla el mensaje de acuerdo a
+              las siguientes reglas:
+              <ol type="a">
+                <li>Si la temperatura es mayor o igual que 28°, imprimir, Primavera</li>
+                <li>Si es menor de 28° hasta 22°, imprimir, Verano</li>
+                <li>Si es menor de 22°, imprimir, Otoño</li>
+                <li>Si es menor de 19°, imprimir, Invierno</li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Desarrollar un programa que genere una lista de 20 números aleatorios entre 0 y 100 y los almacene en un arreglo unidimensional.
+              Posteriormente pida al usuario un número <code>r</code> y determine el numero de veces que se encuentra en la lista o no. También determine
+              lo siguiente:
+              <ol type="a">
+                <li>¿Cuántos números aleatorios son mayores que <code>r</code>?</li>
+                <li>¿Cuántos números aleatorios son menores que <code>r</code>?</li>
+              </ol>
+            </p>
+          </li>
+
+          <!-- Arreglos Multidimensionales -->
+          <hr>
+          <h3>Arreglos Multidimensionales</h3>
+          <li>
+            <p class="text-justify">
+              Haga un programa que solicite el contenido de una matriz <code>3x3</code> y lo imprima en pantalla.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Tomando como base el programa anterior, solicite posteriormente un escalar <code>k</code> y realice la multiplicación de la matriz
+              por este escalar. Imprima la matriz resultante.
+        <pre class="gambas">
+        <span class="inicio">Public</span> <span class="dim">Const</span> M As <span class="tipoDato">Byte</span> = 3
+        <span class="inicio">Public</span> <span class="dim">Const</span> N As <span class="tipoDato">Byte</span> = 3
+
+        <span class="inicio">Public Sub Main()</span>
+          <span class="dim">Dim</span> a As <span class="dim">New</span> <span class="tipoDato">Integer</span>[M, N]
+          <span class="dim">Dim</span> i, j As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> k As <span class="tipoDato">Integer</span>
+
+          <span class="print">Print</span> "<span class="texto">Ingrese los valores de la matriz</span>"
+          <span class="for">For</span> i = 0 <span class="for">To</span> M - 1
+            <span class="for">For</span> j = 0 <span class="for">To</span> N - 1
+              <span class="print">Print</span> "<span class="texto">(</span>"; i + 1; "<span class="texto">, </span>"; j + 1; "<span class="texto">) = </span>";
+              <span class="input">Input</span> a[i, j]
+            <span class="for">Next</span>
+          <span class="for">Next</span>
+
+          <span class="print">Print</span> "<span class="texto">Ingrese un escalar k</span>"
+          <span class="input">Input</span> k
+
+          <span class="for">For</span> i = 0 <span class="for">To</span> M - 1
+            <span class="for">For</span> j = 0 <span class="for">To</span> N - 1
+              a[i, j] = k * a[i, j]
+              <span class="print">Print</span> a[i, j],
+            <span class="for">Next</span>
+            <span class="print">Print</span> ""
+          <span class="for">Next</span>
+        <span class="fin">End</span></pre>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga una variante del programa anterior pero ahora solo multiplique las posiciones <code>(1,1)</code>, <code>(2,2)</code> y
+              <code>(3,3)</code> de la matriz por el escalar. Imprima el resultado.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga un programa que sume dos matrices <code>NxN</code>. El programa debe solicitar <code>N</code>, el contenido de las matrices,
+              realizar la operación e imprimir el resultado.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga un programa que multiplique dos matrices <code>3x3</code>. El programa debe solicitar el contenido de las matrices,
+              realizar la operación e imprimir el resultado.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Realice un programa que dada una una matriz <code>MxN</code> (utilice constantes para estos valores) sea llenada con números aleatorios
+              entre 1 y 10 e imprímala en pantalla. Finalmente determine cual de los elementos de la matriz es el mayor y cual es el menor y sus
+              respectivas posiciones en la matriz.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Dada una matriz cuadrada <code>A</code> de dimensiones <code>NxN</code>, realice un programa en Gambas que permita determinar si dicha matriz
+              es simétrica. Se considera simétrica una matriz que si <code>A[i,j] = A[j,i]</code> se cumple para todos los elementos <code>i,j</code> de la matriz.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Dada una matriz <code>A</code> de dimensiones <code>MxN</code>, realice un programa en Gambas que imprima la matriz tanspuesta. Una matriz traspuesta
+              es aquella en la que se intercambian renglones por columnas y viceversa.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              La distribución de las butacas de un cine se puede modelar por una arreglo bidimensional <code>MxN</code>, donde <code>M=20</code> es el número de filas
+              y <code>N=15</code> el número de butacas por fila. Desarrolle un programa que solicite y asigne los lugares de las personas que compran boletos, se debe
+              verificar que el lugar está disponible antes de asignarlo. Solicite al usuario la ubicación de asiento deseado mediante el número de fila y columna donde
+              se encuentra dentro de la sala de cine. Finalice la venta de boletos ingresando un "-1", posteriormente al finalizar la venta de
+              boletos determine entonces la cantidad de lugares ocupados, disponibles y el ingreso total obtenido por la venta de los boletos. Considere que
+              inicialmente la sala está vacía, por lo tanto, inicialmente el arreglo debe estar lleno de ceros. El boleto en cualquier localidad tiene un costo de
+              48 pesos. <br><b>Tip</b>: Un lugar vacío puede ser una localidad en el arreglo con un 0, y un lugar vendido una localidad en el arreglo con un 1.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              En una Universidad se desea saber el promedio de los alumnos inscritos. Desarrolle un programa que solicite el número de estudiantes y el número de
+              materias (todos los alumnos cursan las mismas materias) y calcule el promedio para cada alumno. Utilice ciclos anidados.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Escriba un programa que reciba como datos dos arreglos bidimiensionales <code>a[4][5]</code> y <code>b[5][4]</code>, calcule la suma de <code>a</code>
+              y la transpuesta de <code>b</code>. Almacene el resultado en un arreglo bidimensional <code>c</code>.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Una empresa automotriz necesita un programa para manejar los montos de ventas de sus 6 sucursales, a lo largo de los últimos 5 años. Los datos son
+              almacenados de la siguiente forma:
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="text-center">Monto1,1</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto1,2</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto1,6</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-center">Monto2,1</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto2,2</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto2,6</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-center">Monto5,1</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto5,2</p>
+                      </td>
+                      <td>
+                        <p class="text-center">...</p>
+                      </td>
+                      <td>
+                        <p class="text-center">Monto5,6</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              Considere que en la matriz los renglones corresponden a los años y las columnas correspondena a las sucursales. <br>
+              La información que necesitan los directores de la empresa para tomar decisiones es la siguiente:
+                  <ol type="a">
+                    <li>Sucursal que más ha vendido en los 5 años</li>
+                    <li>Promedio de ventas al año</li>
+                    <li>Año con mayor promedio de ventas</li>
+                  </ol>
+              Desarrolle un programa que reciba los datos de la empresa, los guarde en una matriz y obtenga la información que necesitan los directivos
+              de la empresa.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              En la secretaría de Turismo de México se almacena la información sobre el número de visitantes mensuales de los 10 principales centros turísticos
+              del país, en los últimos cinco años. Construya un programa que proporcione la siguiente información:
+            <ol type="a">
+              <li>El total de visitantes a cada uno de los centros turísticos</li>
+              <li>Los centros turísticos más y menos visitados en los últimos cinco años, junto con el número de visitantes a cada uno de esos centros.</li>
+              <li>El mes del último año con mayor y menor afluencia turística, junto con el número de visitantes.</li>
+            </ol>
+          </p>
+          </li>
+
+          <!-- Funciones -->
+          <hr>
+          <h3>Funciones y subrutinas</h3>
+          <li>Realizar un algoritmo que calcule una aproximación al número <code>&#960</code>.</li>
+            <p><img src="img/ejercicios/pi2.png" alt="Numero Pi" class="imgcenter"></p>
+          <li>
+            <p class="text-justify">
+              Desarrolle un programa en Gambas que calcule áreas de figuras geométricas básicas. Despliegue en pantalla un menú con las opciones:
+              <ol>
+                <li>Circunferencia</li>
+                <li>Rectángulo</li>
+                <li>Triángulo</li>
+                <li>Trapecio</li>
+                <li>Salir</li>
+              </ol>
+              Utilice un ciclo que permita repetir el cálculo de área indefinidamente hasta que el usuario seleccione la opción salir, solicite los
+              datos necesarios para el cálculo del área de la figura correspondiente dependiendo de la opción que seleccione el usuario (por ejemplo,
+              si selecciona circunferencia solicite radio, si selecciona rectángulo solicite base y altura, etc). Utilice además una función para el
+              cálculo de área de cada figura.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Haga un programa en Gambas que muestre un menú al usuario que le permite hacer conversiones de unidades. El menú debe permitir hacer conversiones
+              de temperatura (Fareheit a Celcius y viceversa), masa (Libras a Kilogramos y viceversa) y longitud (millas a metros y viceversa). El menú debe mostrar
+              4 opciones al usuario: 1. Temperatura, 2. Masa, 3. Longitud y 4. Finalizar. El programa debe continuar hasta que el usuario seleccione la opción 4.
+              Utilice funciones para hacer las conversiones y ciclos para hacer que el programa no termine hasta que se seleccione la opción "4. Finalizar".
+            <pre class="gambas">
+        <span class="inicio">Public Sub Main()</span>
+        <span class="dim">Dim</span> opcion As <span class="tipoDato">Byte</span>
+
+        <span class="repeat">Repeat</span>
+          <span class="print">Print</span> "<span class="texto">Conversor de unidades. Seleccione la opcion deseada</span>"
+          <span class="print">Print</span> "<span class="texto">1. Temperatura</span>"
+          <span class="print">Print</span> "<span class="texto">2. Longitud</span>"
+          <span class="print">Print</span> "<span class="texto">3. Masa</span>"
+          <span class="print">Print</span> "<span class="texto">4. Salir</span>"
+          <span class="input">Input</span> opcion
+
+          <span class="select">Select</span> opcion
+            <span class="select">Case</span> 1
+              <span class="comentario">'Temperatura</span>
+              <span class="sub">temperatura()</span>
+            <span class="select">Case</span> 2
+              <span class="comentario">'Longitud</span>
+              <span class="sub">longitud()</span>
+            <span class="select">Case</span> 3
+              <span class="comentario">'Masa</span>
+              <span class="sub">masa()</span>
+            <span class="select">Case</span> 4
+              <span class="comentario">' Salir</span>
+              <span class="print">Print</span> "<span class="texto">Gracias por usar el sistema</span>"
+            <span class="select">Default</span>
+              <span class="print">Print</span> "<span class="texto">Opcion incorrecta, usuario no valido</span>"
+            <span class="select">End Select</span>
+          <span class="repeat">Until</span> opcion = 4
+        <span class="fin">End</span>
+
+        <span class="sub">Public Sub temperatura()</span>
+          <span class="dim">Dim</span> opcion As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> x, y As <span class="tipoDato">Float</span>
+
+          <span class="print">Print</span> "<span class="texto">1. Farenheit a Celsius</span>"
+          <span class="print">Print</span> "<span class="texto">2. Celsius a Farenheit</span>"
+          <span class="input">Input</span> opcion
+
+          <span class="select">Select</span> opcion
+            <span class="select">Case</span> 1
+              <span class="comentario">' F a C</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese temperatura en F</span>"
+              <span class="input">Input</span> x
+              y = (x - 32) / 1.8
+              <span class="print">Print</span> x; "<span class="texto">ºF = </span>"; y; "<span class="texto">ºC</span>"
+            <span class="select">Case</span> 2
+              <span class="comentario">' C a F</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese temperatura en C</span>"
+              <span class="input">Input</span> x
+              y = 1.8 * x + 32
+              <span class="print">Print</span> x; "<span class="texto">ºC = </span>"; y; "<span class="texto">ºF</span>"
+            <span class="select">Default</span>
+              <span class="print">Print</span> "<span class="texto">Opcion incorrecta, usuario no valido</span>"
+          <span class="select">End Select</span>
+        <span class="sub">End</span>
+
+        <span class="sub">Public Sub longitud()</span>
+          <span class="dim">Dim</span> opcion As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> x, y As <span class="tipoDato">Float</span>
+
+          <span class="print">Print</span> "<span class="texto">1. Millas a Metros</span>"
+          <span class="print">Print</span> "<span class="texto">2. Metros a Millas</span>"
+          <span class="input">Input</span> opcion
+
+          <span class="select">Select</span> opcion
+            <span class="select">Case</span> 1
+              <span class="comentario">' Mi a Me</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese la distancia en millas</span>"
+              <span class="input">Input</span> x
+              y = x * 1609
+              <span class="print">Print</span> x; "<span class="texto"> millas = </span>"; y; "<span class="texto"> metros</span>"
+            <span class="select">Case</span> 2
+              <span class="comentario">'Me a Mi</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese la distancia en metros</span>"
+              <span class="input">Input</span> x
+              y = x / 1609
+              <span class="print">Print</span> x; "<span class="texto"> metros = </span>"; y; "<span class="texto"> millas</span>"
+            <span class="select">Default</span>
+              <span class="print">Print</span> "<span class="texto">Opcion incorrecta, usuario no valido</span>"
+          <span class="select">End Select</span>
+        <span class="sub">End</span>
+
+        <span class="sub">Public Sub masa()</span>
+          <span class="dim">Dim</span> opcion As <span class="tipoDato">Byte</span>
+          <span class="dim">Dim</span> x, y As <span class="tipoDato">Float</span>
+
+          <span class="print">Print</span> "<span class="texto">1. Libras a Kilogramos</span>"
+          <span class="print">Print</span> "<span class="texto">2. Kilogramos a Libras</span>"
+          <span class="input">Input</span> opcion
+
+          <span class="select">Select</span> opcion
+            <span class="select">Case</span> 1
+              <span class="comentario">' Lb a kg</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese masa en libras</span>"
+              <span class="input">Input</span> x
+              y = x * 0.453592
+              <span class="print">Print</span> x; "<span class="texto"> lb = </span>"; y; "<span class="texto"> kg</span>"
+            <span class="select">Case</span> 2
+              <span class="comentario">'kg a Lb</span>
+              <span class="print">Print</span> "<span class="texto">Ingrese masa en kilogramos</span>"
+              <span class="input">Input</span> x
+              y = x / 0.453592
+              <span class="print">Print</span> x; "<span class="texto"> kg = </span>"; y; "<span class="texto"> lb</span>"
+            <span class="select">Default</span>
+              <span class="print">Print</span> "<span class="texto">Opcion incorrecta, usuario no valido</span>"
+          <span class="select">End Select</span>
+        <span class="sub">End</span></pre>
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Realizar un programa que solicite 10 temperaturas. Almacenar las temperaturas en un arreglo e imprima en pantalla el mensaje de acuerdo a las
+              siguientes reglas:
+              <ul>
+                <li>Si la temperatura es mayor o igual que 28°, imprimir, Primavera</li>
+                <li>Si es menor de 28° hasta 22°, imprimir, Verano</li>
+                <li>Si es menor de 22°, imprimir, Otoño</li>
+                <li>Si es menor de 19°, imprimir, Invierno</li>
+              </ul>
+              Resolver con una subrutina que reciba la temperatura e imprima la estación.
+            </p>
+          </li>
+          <li>
+            <p class="text-justify">
+              Realice un programa en Gambas que genere una matriz <code>5x5</code> con números aleatorios entre <code>0</code> y <code>50</code>.
+              Posteriormente obtenga lo siguiente:
+              <ol type="a">
+                <li>La suma de todos los elementos de los renglones 1, 3 y 5</li>
+                <li>La suma de todos los elementos de las columnas 2 y 4</li>
+                <li>La suma de los elementos en la diagonal principal de la matriz</li>
+                <li>La suma de los elementos en la diagonal invertida de la matriz</li>
+            </p>
+            </ol>
+          </li>
+        </ol>
+      </p>
+    </article>
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

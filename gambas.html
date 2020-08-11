@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Algoritmos y Programación</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/iconos.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">Gambas</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">AyP</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="introduccion.html">Introducción</a></li>
+              <li><a href="conceptosBasicos.html">Conceptos Básicos</a></li>
+              <li><a href="diagramasDeFlujo.html">Diagramas de Flujo</a></li>
+              <li><a href="pseudocodigo.html">Pseudocódigo</a></li>
+              <!-- <li class="dropdown">
+                <a href="gambas.html" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                  <span class="caret">Gambas</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="gambas.html#intro"></a></li>
+                  <li><a href="gambas.html#ide"></a></li>
+                  <li><a href="gambas.html#sintaxis"></a></li>
+                  <li><a href="gambas.html#lectura"></a></li>
+                </ul>
+              </li> -->
+              <li class="active"><a href="gambas.html">Gambas</a></li>
+              <li><a href="condicionales.html">Condicionales</a></li>
+              <li><a href="ciclos.html">Ciclos</a></li>
+              <li><a href="funciones.html">Funciones y Subrutinas</a></li>
+              <li><a href="arreglos.html">Arreglos</a></li>
+              <li><a href="cadenas.html">Cadenas</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="practicas.html">Prácticas</a></li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1wNCl5H8CqGifhpKCQ-TBtVGHGAxp5d4-3nL7APJSjZw/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="listaDeEjercicios.html">Lista de Ejercicios</a></li>
+              <li><a href="ejemplos.html">Ejemplos en video</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <!-- Introducción -->
+    <article class="tema clearfix">
+      <h2 id="intro">Introducción</h2>
+      <p class="post-contenido text-justify">
+        <a href="http://gambas.sourceforge.net/en/main.html" target="_blank">Gambas</a> (Gambas Almost Means Basic) es un lenguaje de programación de alto nivel libre
+        basado en BASIC y es distribuido bajo la licencia <a href="https://www.gnu.org/licenses/gpl.html" target="_blank">GNU GPL</a>.
+      </p>
+      <img src="img/gambas/logo.png" alt="" class="imgcenter img-rounded img-responsive">
+      <p class="post-contenido text-justify">
+        Permite crear formularios con botones de comandos, cuadros de texto y muchos otros controles y enlazarlos a bases de datos como MySQL, PostgreSQL o SQLite además de facilitar la creación de aplicaciones muy diversas como videojuegos (utilizando OpenGL), aplicaciones para dispositivos móviles (en desarrollo pero muy avanzado), aplicaciones de red (con manejo avanzado de protocolos HTTP, FTP, SMTP, DNS), entre otras.
+      </p>
+      <p class="post-contenido text-justify">
+        La <a href="http://gambasdoc.org/" target="_blank">documentación oficial de Gambas</a> contiene mucha información acerca de las funciones que existen en el lenguaje y la sintaxis para utilizarlas. Considere a la documentación a partir de hoy como su mejor y fiel amigo en el estudio y la realización de programas en Gambas.
+      </p>
+      <p class="post-contenido text-justify">
+        Gambas permite escribir facilmente aplicaciones para la consola -en modo texto- y aplicaciones gráficas.
+      </p>
+    </article>
+
+    <!-- IDE de Gambas -->
+    <article class="tema clearfix">
+      <h2 id="ide">IDE de Gambas</h2>
+      <p class="post-contenido text-justify">
+        La ventana principal de Gambas versión 3 tiene un aspecto como lo muestra la imágen:
+        <img src="img/gambas/pantalla.png" alt="" class="imgcenter img-rounded img-responsive">
+      </p>
+      <p class="post-contenido text-justify">
+        Podemos observar en la imágen los elementos principales que componen Gambas, los cuales son los siguientes:
+      </p>
+        <ul>
+          <li>
+            <p class="post-contenido text-justify">
+              En la parte superior la barra de herramientas con botones para las acciones más comunes en el desarrollo de aplicaciones.
+            </p>
+          </li>
+          <li>
+            <p class="post-contenido text-justify">
+              En la izquierda se encuentra el visor de los archivos que contiene el proyecto activo, en el se pueden abrir o cerrar todos los archivos que se hayan
+              creado o agregado al proyecto activo.
+            </p>
+          </li>
+          <li>
+            <p class="post-contenido text-justify">
+              En la parte inferior se encuentra el visor de la consola. Todos los programas que se desarrollen para la consola desplegarán su respectivo resultado
+              en esta área.
+            </p>
+          </li>
+          <li>
+            <p class="post-contenido text-justify">
+              Finalmente, en el centro de la pantalla se encuentra el editor de código para el archivo activo. Notese que este editor tiene sus botones de acciones
+              comunes y permite tener abiertos varios archivos a la vez y navegar entre ellos mediante pestañas.
+            </p>
+          </li>
+        </ul>
+        <p class="post-contenido text-justify"></p>
+    </article>
+
+    <!-- Variables -->
+    <article class="tema clearfix">
+      <h2 id="sintaxis">Variables</h2>
+      <p class="post-contenido text-justify">
+        Los programas manejan datos continuamente. Estos datos pueden ser de muchos tipos: números, letras, textos, etc., y cambiar a lo largo de la ejecución del
+        programa (en ese caso reciben el nombre de variables) o permanecer con un valor fijo durante todo el tiempo (entonces se denominan constantes). A los datos
+        que usa un programa se les denomina un nombre identificador.
+      </p>
+      <p class="post-contenido text-justify">
+        Hay dos lugares donde se pueden declarar las variables, dependiendo del ámbito en el que se vayan a usar. Si se declaran dentro de una subrutina o función,
+        están disponibles para ser usadas dentro del ámbito correspondiente. Si se declaran al principio del archivo de código están disponibles para todo el
+        código de ese archivo, en todas sus subrutinas.
+      </p>
+      <p class="post-contenido text-justify">
+        La sintaxis para declarar variables en Gambas es la siguiente:
+      </p>
+      <pre class="gambas">
+        <span class="dim">Dim</span> nombreVariable As <span class="tipoDato">tipoDeDato</span></pre>
+        <p class="post-contenido text-justify">
+          La declaración de todas las variables en Gambas deben iniciar con la palabra clave <code>Dim</code> y finalizadas con el tipo de dato que se
+          desea declarar la variable. Observe que antes del tipo de dato es necesario escribir la palabara clave <code>as</code>.
+        </p>
+        <p class="post-contenido text-justify">
+          Las variables son un contenedor de información y existen diferentes tipos de información que se pueden almacenar, a esto se le conoce como tipo de dato.
+          Los tipos de datos que existen en Gambas son los siguientes:
+          <ul>
+            <li><code>Boolean</code>: es un tipo de dato que suele ser el resultado de una comparación. Solo acepta dos valores: <code>True</code> y <code>False</code>.</li>
+            <li><code>Byte</code>: representa un número entero positivo entre 0 y 255.</li>
+            <li><code>Short</code>: representa un número entero con valores posibles entre -32,768 y +32,767</li>
+            <li><code>Integer</code>: representa un número entero con valores posibles entre -2,147,483,648 y +2,147,483,647</li>
+            <li><code>Long</code>: representa un número entero con valores posibles entre: -9,223,372,036,854,775,808 y +9,223,372,036,854,775,807</li>
+            <li><code>Single</code>: representa un número real, con decimales, con valores posibles entre -1.7014118E+38 y +1.7014118E+38.</li>
+            <li><code>Float</code>: representa un número real, con decimales, con valores posibles entre -8.98846567431105E+307 y +8.98846567431105E+307</li>
+            <li><code>Date</code>: sirve para almacenar un valor de fecha y hora. Internamente, la fecha y hora se almacena en formato UTC, al devolver el dato se representa
+              en el formato local, según la configuración del ordenador.</li>
+            <li><code>String</code>: se usa para almacenar una cadena de texto. Se asignan mediante el uso de comillas dobles.</li>
+            <li><code>Variant</code>: significa cualquier tipo de dato, es decir, puede almacenar un Integer, Single, String, etc. Se debe evitar su uso porque ocupa más
+              memoria que los anteriores y los cálculos con Variant son mucho más lentos.</li>
+            <li><code>Object</code>: representa cualquier objeto creado con Gambas.</li>
+          </ul>
+        </p>
+    </article>
+
+    <!-- Constantes -->
+    <article class="tema clearfix">
+      <h2>Constantes</h2>
+      <p class="post-contenido text-justify">
+        En un programa es común tener parámetros que no cambian de valor durante la ejecución. Para estos casos resulta muy práctico utilizar constantes. Las constantes
+        se definen sólo al principio de un archivo de módulo o clase, no se pueden definir dentro de las subrutinas y funciones
+      </p>
+      <p class="post-contenido text-justify">
+        La sintaxis es la siguiente:
+        <pre class="gambas">
+        { Public | Private } <span class="dim">Const</span> nombreVariable <span class="dim">As</span> <span class="tipoDato">TipoDato</span> = Valor constante</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo</b>. Se declara una constante que tiene el valor constante del número <code>pi</code>.
+        <pre class="gambas">
+        Public <span class="dim">Const</span> p <span class="dim">As</span> <span class="tipoDato">Float</span> = 3.141596</pre>
+      </p>
+      </p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+    <!-- Escritura -->
+    <article class="tema clearfix">
+      <h2 id="escritura">Escritura</h2>
+      <p class="post-contenido text-justify">
+        En muchos programas es frecuentemente necesaria la entrada y salida de datos, para ello existen un par de funciones de entrada y salida. Para el caso de entrada, o bien
+        lectura, se utiliza la siguiente sintaxis.
+      </p>
+      <pre class="gambas">
+        <span class="print">Print</span> [ # Flujo , ] Expresión [ { ; | ;; | , } Expresión ... ] [ { ; | ;; | , }  ]</pre>
+      <p class="post-contenido text-justify">
+        La instrucción <code>Print</code> permite imprimir <code>expresiones</code>  y dirijirlos a un <code>flujo de salida</code>, que por defecto es la salida estándar (la pantalla).
+        Las expresiones que se pueden imprimir son variables, cadenas de caracteres y combinaciones de ellas.
+      </p>
+      <p class="post-contenido text-justify">
+        Esta función permite algunas opciones en cuanto se imprimen las expresiones. Dichas opciones son las siguientes:
+        <ul>
+          <li>Si se añade un punto y coma al final de la instrucción, se dejará el cursor en esa posición por lo que la siguiente impresión se hará justo en ese punto.</li>
+          <li>Si no hay un punto y coma después de la expresión, se añade un caracter de "nueva línea" después de la última expresión.</li>
+          <li>Si se utiliza una coma en lugar de un punto y coma, se añade un caracter de tabulación (código 9 ASCII) para separar las expresiones.</li>
+          <li>Si hay un punto y coma doble, se añade un caracter de "espacio" entre las expresiones.</li>
+        </ul>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 1</b>: La siguiente instrucción imprime el contenido de la variable <code>x</code> en pantalla y hace un salto de línea.
+        <pre class="gambas">
+          <span class="print">Print</span> x</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 2</b>: La siguiente instrucción imprime el caracter <code>x</code> en pantalla y hace un salto de línea.
+        <pre class="gambas">
+          <span class="print">Print</span> "x"</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 3</b>: La siguiente instrucción imprime la cadena de caracteres "<code>Hola mundo cruel</code>" en la pantalla, deja el cursor inmediatamente después del
+        ultimo caracter impreso.
+        <pre class="gambas">
+          <span class="print">Print</span> "Hola mundo cruel.";</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 4</b>: La siguiente instrucción imprime la cadena de caracteres "<code>Hola mundo cruel</code>" en la pantalla, al final hace un salto de linea.
+        <pre class="gambas">
+          <span class="print">Print</span> "Hola";; "mundo";; "cruel."</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 5</b>: La siguiente instrucción imprime una cadena de caracteres y el contenido de una variable en la pantalla. Si por ejemplo <code>x=4</code>,
+        la impresión en pantalla seria: "<code>El contenido de la variable es 4.</code>"
+        <pre class="gambas">
+          <span class="print">Print</span> "El contenido de la variable es";; x ; "."</pre>
+      </p>
+    </article>
+
+    <!-- Lectura -->
+    <article class="tema clearfix">
+      <h2 id="lectura">Lectura</h2>
+      <p class="post-contenido text-justify">
+        Para el caso de la lectura de información hacia el programa se utiliza la función Input con la siguiente notación:
+        <pre class="gambas">
+          <span class="input">Input</span> [ # Flujo , ] Variable [ , Variable ... ]</pre>
+          Lee desde <code>Flujo</code>, y convierte elementos separados por caracteres de espacio o retornos de carro con la función <code>Val</code> antes de situar el
+          valor en las variables. Si no se especifica el flujo, se lee de la entrada estándar. Las variables deben ser declaradas antes de utilizarse con esta función.
+      </p>
+      <p class="post-contenido text-justify">
+        Es posible leer varios datos con un solo Input, separando las variables con comas. Los valores se leerán uno a la vez y se guardarán en las variables en el orden
+        en que fueron escritas en la función. Las variables pueden ser de diferentes tipos, son independientes entre ellas.
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 1</b>. La siguiente función solicita un número y lo guarda en la variable <code>x</code>.
+        <pre class="gambas">
+          <span class="input">Input</span> x</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 2</b>. La siguiente instrucción lee una cadena de caracteres y la guarda en la variable <code>nombre</code>.
+        <pre class="gambas">
+          <span class="input">Input</span> nombre</pre>
+      </p>
+      <p class="post-contenido text-justify">
+        <b>Ejemplo 3</b>. La siguiente instrucción guarda el <code>nombre</code> de una persona, su <code>edad</code> y su <code>RFC</code>.
+        <pre class="gambas">
+          <span class="input">Input</span> nombre, edad, rfc</pre>
+      </p>
+    </article>
+
+    <!-- Operadores -->
+    <article class="tema clearfix">
+      <h2 id="operadores">Operadores aritméticos, relacionales y lógicos</h2>
+      <h3>Operadores Aritméticos</h3>
+      <p class="post-contenido text-justify">
+        Cuando se trata de trabajar con números, Gambas tiene las operaciones habituales en casi todos los lenguajes de programación. Para poder realizar operaciones
+        aritméticas necesitamos de operadores aritméticos. El resultado de una operación será un número.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="info">
+              <th class="textoTabla">Operador</th>
+              <th class="textoTabla">Operación</th>
+              <th class="textoTabla">Ejemplo</th>
+              <th class="textoTabla">Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="textoTabla">^</td>
+              <td class="textoTabla">Potencia</td>
+              <td class="textoTabla">4^3</td>
+              <td class="textoTabla">64</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">*</td>
+              <td class="textoTabla">Multiplicación</td>
+              <td class="textoTabla">8.25*7</td>
+              <td class="textoTabla">57.75</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">/</td>
+              <td class="textoTabla">División</td>
+              <td class="textoTabla">15/4</td>
+              <td class="textoTabla">3.75</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">+</td>
+              <td class="textoTabla">Suma</td>
+              <td class="textoTabla">125.78 + 62.50</td>
+              <td class="textoTabla">188.28</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">-</td>
+              <td class="textoTabla">Resta</td>
+              <td class="textoTabla">65.30 - 32.33</td>
+              <td class="textoTabla">32.97</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">Mod</td>
+              <td class="textoTabla">Módulo (Residuo de la división)</td>
+              <td class="textoTabla">15 Mod 2</td>
+              <td class="textoTabla">1</td>
+            </tr>
+            <tr>
+              <td class="textoTabla">Div</td>
+              <td class="textoTabla">División Entera</td>
+              <td class="textoTabla">17 Div 3</td>
+              <td class="textoTabla">5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Operadores Relacionales</h3>
+      <p class="post-contenido text-justify">
+        Los operadores relacionales permiten comparar dos operandos. Los resultados pueden ser números, alfanuméricos, constantes o variables. Las constantes o
+        variables pueden ser a su vez de tipo entero, real, caracter o cadena de caracteres. El resultado de una expresión con operadores relacionales es verdadero
+        o falso.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="info">
+              <th class="textoTabla">Operador</th>
+              <th class="textoTabla">Operación</th>
+              <th class="textoTabla">Ejemplo</th>
+              <th class="textoTabla">Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="textoTabla"><code>=</code></td>
+              <td class="textoTabla">Igual que</td>
+              <td class="textoTabla"><code>'Hola' = 'Lola'</code></td>
+              <td class="textoTabla"><code>False</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>&lt&gt</code></td>
+              <td class="textoTabla">Diferente de</td>
+              <td class="textoTabla"><code>'a'&lt&gt'b'</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>&lt</code></td>
+              <td class="textoTabla">Menor que</td>
+              <td class="textoTabla"><code>7&lt15</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>&gt</code></td>
+              <td class="textoTabla">Mayor que</td>
+              <td class="textoTabla"><code>22&gt11</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>&gt=</code></td>
+              <td class="textoTabla">Menor o igual que</td>
+              <td class="textoTabla"><code>22&lt=15</code></td>
+              <td class="textoTabla"><code>False</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>&gt=</code></td>
+              <td class="textoTabla">Mayor o igual que</td>
+              <td class="textoTabla"><code>35&gt=20</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Operadores Lógicos</h3>
+      <p class="post-contenido text-justify">
+        Los operadores lógicos permiten formular condiciones complejas a partir de condiciones simples. Los operadores lógicos son de conjunción (o), disyunción (y) o
+        negación (no).
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="info">
+              <th class="textoTabla">Operador</th>
+              <th class="textoTabla">Operación</th>
+              <th class="textoTabla">Ejemplo</th>
+              <th class="textoTabla">Resultado</th>
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="textoTabla"><code>Or</code></td>
+              <td class="textoTabla">Conjunción: O Lógica</td>
+              <td class="textoTabla"><code>4&gt5 Or 6&gt5</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>And</code></td>
+              <td class="textoTabla">Disyunción: Y Lógica</td>
+              <td class="textoTabla"><code>4&gt5 Or 6&gt5</code></td>
+              <td class="textoTabla"><code>False</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>Not</code></td>
+              <td class="textoTabla">Negación: No Lógico</td>
+              <td class="textoTabla"><code>Not 4&gt5</code></td>
+              <td class="textoTabla"><code>True</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </article>
+
+    <!-- Jerarquía de Operaciones -->
+    <article class="tema clearfix">
+      <h2>Jerarquía de Operaciones</h2>
+      <p class="post-contenido text-justify">
+        Al evaluar expresiones que contienen operadores aritméticos debemos representar la jerarquía en el orden correcto. Es decir, si tenemos en una expresión más
+        de un operador, debemos aplicar primero el operador de mayor jerarquía, resolver esa operación y así sucesivamente.
+      </p>
+      <div class="table-responsive">
+        <table class="table table-bordered table striped">
+          <thead>
+            <tr class="info">
+              <th class="textoTabla">Operador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="textoTabla"><code>()</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla">Funciones y Subrutinas</td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>^</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>*, /, Div, Mod</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>+, -</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>=, &lt&gt, &lt, &gt, &lt=, &gt=</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>Not</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>And</code></td>
+            </tr>
+            <tr>
+              <td class="textoTabla"><code>Or</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="post-contenido text-justify">
+        Es importante señalar que el operador <code>()</code> es un operador asociativo que tiene la prioridad más alta en cualquier lenguaje de programación.
+        La siguiente tabla muestra la jerarquía de los operadores aritméticos. Mientras más arriba en la tabla se encuentre el operador, mayor será su jerarquía;
+        mientras más abajo en la tabla se encuentre el operador, menor será su jerarquía.
+      </p>
+      <p class="post-contenido text-justify">
+        Cuando se evalúa una expresión que tiene operadores aritméticos, lógicos y/o relacionales, Gambas lo resuelve de acuerdo a la jerarquía de las operaciones
+        comenzando con la mayor jerarquía hacia la menor. Si en algún momento hubiera empates, dos operaciones con la misma jerarquía, las realiza comenzando de
+        izquierda hacia la derecha.
+      </p>
+    </article>
+
+    <!-- Conversiones -->
+    <article class="tema clearfix">
+      <h2 id="conversiones">Conversiones de datos</h2>
+      <p class="post-contenido text-justify">
+        Gambas permite distintas conversiones de datos. La forma de hacer la conversión puede ser explícita o implícita. Son <b>conversiones implícitas</b> cuando el propio
+        intérprete de Gambas se encarga de gestionarlas. Por ejemplo:
+        <pre class="gambas">
+          <span class="dim">Dim</span> resultado As <span class="tipoDato">Single</span>
+          <span class="dim">Dim</span> operando1 As <span class="tipoDato">Single</span>
+          <span class="dim">Dim</span> operando2 As <span class="tipoDato">Integer</span>
+
+          operando1 = 3.5
+          operando2 = 2
+
+          resultado = operando1 * operando2</pre>
+        En este caso, para poder realizar la multiplicación, el compilador convierte la variable operando2 a tipo <code>Single</code>.
+      </p>
+      <p class="post-contenido text-justify">
+        Por otro lado, las <b>conversiones explícitas</b> las que deben hacer que el programador al escribir el código para poder realizar operaciones. Estas conversiones
+        se hacen mediante funciones que están incluidas en Gambas. Las funciones de conversión son las siguientes:
+        <ul>
+          <li><code>CBool(expresión)</code>: Convierte la expresión a un valor booleano, verdadero o falso. El resultado será falso si la expresión es falsa, el número
+             0, o una cadena de texto vacía o un valor nulo. Será verdadero en los demás casos. Por ejemplo:</li>
+          <ul>
+            <li>Devuelve <code>False</code> las siguientes operaciones: <code>Cbool("")</code>, <code>Cbool(0)</code>, <code>Cbool(NULL)</code></li>
+            <li>Devuelve <code>True</code> las operaciones: <code>Cbool(1)</code>, <code>Cbool("Gambas")</code></li>
+          </ul>
+          <li><code>CByte(expresión)</code>: Convierte la expresión en un valor tipo Byte. Primero se convierte la expresión a un número binario de 4 bytes. Si este
+            número es mayor a 255, se corta recogiendo los 8 bits menos significativos. Por ejemplo, <code>Cbyte("17")</code> devuelve 17, pero <code>Cbyte(100000)</code>
+            devuelve 160.</li>
+          <li><code>CShort(expresión)</code>, <code>CInt(expresión)</code> o <code>CInteger(expresión)</code>, y <code>CLong(expresión)</code>: Convierten, respectivamente,
+            la expresión en un número tipo <code>Short</code>, <code>Integer</code> y <code>Long</code>. En el caso de <code>CShort</code> la conversión se realiza igual que
+            para <code>CByte</code>, produciendo resultados extraños si la expresión resulta en un número mayor a 32,767.</li>
+          <li><code>CDate(expresión)</code>: Convierte la expresión en una fecha y sólo admite el formato mes/día/año.</li>
+          <li><code>CSingle(expresión)</code>, <code>CSng(expresión)</code> y <code>CFoat(expresión)</code> o <code>Cflt(expresión)</code>: Convierten, respectivamente, la
+            expresión en un número del tipo <code>Single</code> y <code>Float</code>. La expresión debe usar el punto (<code>.</code>) y no la coma (<code>,</code>) como
+            separador decimal.</li>
+          <li><code>CStr(expresión)</code>: Convierte la expresión en una cadena de texto sin tomar en cuenta la configuración local. Por tanto, <code>Str$(1.58)</code>
+            devuelve la cadena de texto 1,58, independientemente de si la configuración local indica que el separador decimal es el punto o la coma, o
+            <code>CStr(CDate("09/06/1972 01:45:12"))</code> devuelve "<code>/06/1972 01:45:12</code>"</li>
+          <li><code>Str$(expresión)</code>: Convierte la expresión en una cadena de texto, teniendo en cuenta la configuración local. Por tanto, <code>Str$(1.58)</code>
+            devuelve la cadena de texto 1,58, si la configuración local está en español. Del mismo modo, <code>Str$(CDate("09/06/1972 01:45:12"))</code> devuelve
+            "<code>/06/1972 01:45:12</code>" si la configuración local está en español.</li>
+          <li><code>Val(expresión)</code>: Convierte una cadena de texto en un tipo <code>Boolean</code>, <code>Date</code> o alguno de los tipos numéricos, dependiendo
+            del contenido de la expresión. <code>Val</code> es la función opuesta de <code>Str$</code> y, por tanto, también tiene en cuenta la configuración local de
+            la computadora en la que se ejecuta. Intenta convertir la expresión en un tipo <code>Date</code>, si no puede en un número con decimales, si tampoco puede
+            en un número entero y si, finalmente, tampoco puede la convierte en un tipo <code>Boolean</code>.</li>
+        </ul>
+      </p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+
+    <!-- Funciones Especiales -->
+    <article class="tema clearfix">
+      <h2 id="funcEspeciales">Funciones Especiales</h2>
+      <p class="post-contenido text-justify">
+        Aparte de los operadores existen funciones matemáticas para realizar cálculos complejos o especiales:
+            <ul>
+              <li><code>Abs(número)</code>: devuelve el valor absoluto de un número.</li>
+              <li><code>Dec(número)</code>: decrementa en una unidad al número.</li>
+              <li><code>Frac(número)</code>: devuelve la parte no entera de un número.</li>
+              <li><code>Inc(número)</code>: incrementa en una unidad el número</li>
+              <li><code>Int(número)</code>: devuelve la parte entera del número.</li>
+              <li><code>Max(número1, número2, ...)</code>: devuelve el número mayor.</li>
+              <li><code>Min(número1, número2, ...)</code>: devuelve el número menor.</li>
+              <li><code>Round(número, decimales)</code>: redondea un número con los decimales deseados.</li>
+              <li><code>Sgn(número)</code>: devuelve el signo de un número.</li>
+              <li><code>Rnd([mínimo], [máximo])</code>: devuelve un número aleatorio comprendido entre <code>mínimo</code> y <code>máximo</code>. Si la función es
+                invocada sin argumentos, se devuelve un número aleatorio entre 0 y 1. Si solo se expresa un valor, se devuelve un número entre 0 y ese número.
+                Antes de utilizar esta función es necesario ejecutar la instrucción <code>Randomize</code> para generar una semilla, de no ser así se obtendrá
+                siempre el mismo número en sucesivas ejecuciones de <code>Rnd</code>.</li>
+            </ul>
+      </p>
+      <p class="post-contenido text-justify"></p>
+      <p class="post-contenido text-justify"></p>
+    </article>
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
