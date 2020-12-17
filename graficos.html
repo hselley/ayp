@@ -559,6 +559,84 @@
         <span class="fin">End</span>
       </pre>
           </p>
+      </li>
+      <li>
+        <p class="post-contenido text-justify">
+          <b>Ejemplo 9.</b> Drag & Drop: Mover una imagen de un PictureBox a otro.
+        </p>
+        <p class="post-contenido text-justify">
+          Crear:
+          <ul>
+            <li>1 formulario</li>
+            <li>1 imagen</li>
+            <li>1 PictureBox: activar propieda Stretch (cargar la imagen)</li>
+            <li>1 PictureBox: activar propiedad Stretch y Drop</li>
+          </ul>
+        </p>
+        <p class="post-contenido text-justify">
+          Código
+          <pre class="gambas">
+      <span class="inicio">Public Sub PictureBox1_MouseDrag()</span>
+        <span class="elemento">PictureBox1</span>.<span class="funcion">Drag</span>("<span class="texto">imagen.jpg</span>")
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub PictureBox2_MouseDrop()</span>
+        <span class="elemento">PictureBox2</span>.<span class="funcion">Picture</span> = <span class="funcion">Picture</span>[<span class="texto">Drag.Data</span>]
+      <span class="fin">End</span>
+          </pre>
+        </p>
+      </li>
+      <li>
+        <p class="post-contenido text-justify">
+          <b>Ejemplo 10.</b> Drag & Drop: Mover una imagen de un PictureBox a algún PictureBox.
+        </p>
+        <p class="post-contenido text-justify">
+          Crear:
+          <ul>
+            <li>1 formulario</li>
+            <li>3 imágenes</li>
+            <li>3 PictureBox: activar propieda Stretch (cargar cada imagen en cada PictureBox)</li>
+            <li>1 PictureBox: activar propiedad Stretch y Drop</li>
+            <li>3 TextLabel: para los PBox de origen, tendrá el nombre del archivo origen</li>
+            <li>1 TextLabel: para el Pbox destino, tendrá el nombre del archivo arrastrado </li>
+            <li>1 TextLabel: para el PBox destino, tendrá el valor de Drag.Data</li>
+          </ul>
+        </p>
+        <p class="post-contenido text-justify">
+          Código
+          <pre class="gambas">
+      <span class="elemento">Public</span> archivos <span class="tipoDato">As New String[3]</span>
+
+      <span class="inicio">Public Sub PictureBox1_MouseDrag()</span>
+        <span class="elemento">PictureBox1</span>.<span class="funcion">Drag</span>(<span class="texto">archivos[0]</span>)
+        <span class="print">Print</span> <span class="texto">archivos[0]</span>
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub PictureBox2_MouseDrag()</span>
+        <span class="elemento">PictureBox2</span>.<span class="funcion">Drag</span>(<span class="texto">archivos[1]</span>)
+        <span class="print">Print</span> <span class="texto">archivos[1]</span>
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub PictureBox3_MouseDrag()</span>
+        <span class="elemento">PictureBox3</span>.<span class="funcion">Drag</span>(<span class="texto">archivos[2]</span>)
+        <span class="print">Print</span> <span class="texto">archivos[2]</span>
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub PictureBox4_Drop()</span>
+        <span class="elemento">PictureBox4</span>.<span class="funcion">Picture</span> = <span class="funcion">Picture</span>[<span class="texto">Drag.Data</span>]
+        <span class="elemento">TextLabel4</span>.<span class="funcion">Text</span> = <span class="elemento">Drag</span>.<span class="funcion">Data</span>
+        <span class="elemento">TextLabel5</span>.<span class="funcion">Text</span> = <span class="elemento">Drag</span>.<span class="funcion">Source.Name</span>
+        <span class="print">Print</span> <span class="texto">Drag.Data</span>
+      <span class="fin">End</span>
+
+      <span class="inicio">Public Sub PictureBox4_Drop()</span>
+        archivos[0] = "<span class="texto">uno.jpg</span>"
+        archivos[1] = "<span class="texto">dos.jpg</span>"
+        archivos[2] = "<span class="texto">tres.jpg</span>"
+      <span class="fin">End</span>
+          </pre>
+        </p>
+      </li>
       </ul>
     </article>
   </section>
